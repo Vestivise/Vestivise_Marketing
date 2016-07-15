@@ -69,7 +69,7 @@ h3 {
 }
 
 .btn.btn-primary:hover {
-  background-color: #f03c58;
+  background-color: #f63f54;
 }
 
 .navbar-nav li a:hover, 
@@ -567,7 +567,7 @@ section {
   background-color: #ff5b92;
 }
 .team-member:hover .social-icons ul li a.linkedin {
-  background-color: #f03c58;
+  background-color: #f63f54;
 }
 .team-member:hover .social-icons ul li a.rss {
   background-color: #ff6b00;
@@ -979,7 +979,7 @@ ul.address {
   background-color: #ff5b92;
 }
 #footer .social-icons ul li a.linkedin:hover {
-  background-color: #f03c58;
+  background-color: #f63f54;
 }
 #footer .social-icons ul li a.tumblr:hover {
   background-color: #ff6b00;
