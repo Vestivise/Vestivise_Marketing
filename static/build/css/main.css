@@ -69,7 +69,7 @@ h3 {
 }
 
 .btn.btn-primary:hover {
-  background-color: #f63f54;
+  background-color: #f34258;
 }
 
 .navbar-nav li a:hover, 
@@ -283,9 +283,18 @@ section {
 }
 
 .nav-logo{
-	max-height: 1.5em;
+	height: 1em;
 }
 
+#header-brand{
+	color: white;
+	font-family: 'Lato', sans-serif;
+}
+
+.features-square{
+	height: 80vh;
+	max-width: 90vw;
+}
 /*************************
 ********Service CSS*******
 **************************/
@@ -567,7 +576,7 @@ section {
   background-color: #ff5b92;
 }
 .team-member:hover .social-icons ul li a.linkedin {
-  background-color: #f63f54;
+  background-color: #f34258;
 }
 .team-member:hover .social-icons ul li a.rss {
   background-color: #ff6b00;
@@ -979,7 +988,7 @@ ul.address {
   background-color: #ff5b92;
 }
 #footer .social-icons ul li a.linkedin:hover {
-  background-color: #f63f54;
+  background-color: #f34258;
 }
 #footer .social-icons ul li a.tumblr:hover {
   background-color: #ff6b00;

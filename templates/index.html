@@ -22,6 +22,7 @@
   <![endif]-->
   
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="shortcut icon" href="{% static 'media/images/favicon.ico' %}">
 </head><!--/head-->
 
@@ -36,21 +37,21 @@
       <div class="carousel-inner">
         <div class="item active" style="background-image: url({% static 'media/images/slider/1.jpg' %})">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig"><img class="big-logo" src="{% static 'media/images/logo.jpg' %}" alt="vestivise"></h1>
+            <h1 class="animated fadeInLeftBig"><img class="big-logo" src="{% static 'media/images/logo.svg' %}" alt="vestivise"></h1>
             <p class="animated fadeInRightBig">Simple Investment Reporting</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#features">Start now</a>
           </div>
         </div>
         <div class="item" style="background-image: url({% static 'media/images/slider/2.jpg' %})">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig"><img class="big-logo" src="{% static 'media/images/logo.jpg' %}" alt="vestivise"></h1>
+            <h1 class="animated fadeInLeftBig"><img class="big-logo" src="{% static 'media/images/logo.svg' %}" alt="vestivise"></h1>
             <p class="animated fadeInRightBig">Understand the Numbers</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#features">Start now</a>
           </div>
         </div>
         <div class="item" style="background-image: url({% static 'media/images/slider/3.jpg' %})">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig"><img class="big-logo" src="{% static 'media/images/logo.jpg' %}" alt="vestivise"></h1>
+            <h1 class="animated fadeInLeftBig"><img class="big-logo" src="{% static 'media/images/logo.svg' %}" alt="vestivise"></h1>
             <p class="animated fadeInRightBig">See the Full Picture of Your Investments</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#features">Start now</a>
           </div>
@@ -71,9 +72,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
-            <h1><img class="nav-logo" src="{% static 'media/images/logo.jpg' %}" alt="vestivise"></h1>
-          </a>                    
+            <h1 id="header-brand">Vestivise</h1>                 
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
@@ -92,66 +91,10 @@
         <div class="row">
           <div class="text-center col-sm-8 col-sm-offset-2">
             <h2>Our features</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
           </div>
-        </div> 
-      </div>
-      <div class="text-center our-features">
-        <div class="row">
-          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="service-icon">
-              <i class="fa fa-flask"></i>
-            </div>
-            <div class="service-info">
-              <h3>Brand Identity</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
-            <div class="service-icon">
-              <i class="fa fa-umbrella"></i>
-            </div>
-            <div class="service-info">
-              <h3>Creative Idea</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
-            <div class="service-icon">
-              <i class="fa fa-cloud"></i>
-            </div>
-            <div class="service-info">
-              <h3>Awesome Support</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
-            <div class="service-icon">
-              <i class="fa fa-coffee"></i>
-            </div>
-            <div class="service-info">
-              <h3>Professional Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="750ms">
-            <div class="service-icon">
-              <i class="fa fa-bitbucket"></i>
-            </div>
-            <div class="service-info">
-              <h3>App Development</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="850ms">
-            <div class="service-icon">
-              <i class="fa fa-gift"></i>
-            </div>
-            <div class="service-info">
-              <h3>Clean Code</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
+        </div>
+        <div class="features-square-div">
+        <img class="features-square" src="{% static 'media/images/vestivise_features.svg' %}">
         </div>
       </div>
     </div>
@@ -165,20 +108,11 @@
             <p>Our mission at Vestivise is to help people understand their investments. We want to help you realize if you're paying too high of fees or if you are allocated improperly.</p>
             <p>For anyone who lacks financial knowledge and for those who are afraid of reaching their retirement goals (92% of active investors don't), Vestivise is the place to go to find simplicity, education, and understanding of all your investments at any time.
             </p>
-            <p>Our interactive web report shows four categories of information– assets, returns, risks, and costs. In each category, you will find the relevant and essential information you need to be more informed and at peace with your money.
+            <p>Our interactive web report shows four categories of information– assets, returns, risks, and costs. In each category, you will find the relevant and essential information you need to be more informed and at peace with your money.</p>
     </div>
     </div>
-    </div>
-        </div>
-      </div>
     </div>
   </section><!--/#about-us-->
-  <section id="features" class="parallax">
-    <div class="container">
-                   
-      </div>
-    </div>
-  </section><!--/#features-->
 
   <section id="blog">
     <div class="container">
@@ -198,7 +132,7 @@
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="container text-center">
         <div class="footer-logo">
-          <a href="index.html"><img class="img-responsive" src="{% static 'media/images/logo.jpg" alt=""></a>
+          <a href="index.html"><img class="img-responsive" src="{% static 'media/images/logo.svg" alt=""></a>
         </div>
         <div class="social-icons">
           <ul>
