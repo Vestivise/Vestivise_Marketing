@@ -74,7 +74,7 @@ span {
     width: 700px;
     text-align: left;
     color:#5A5959;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .vestBar{
@@ -243,4 +243,39 @@ span {
 	left: 24px !important;  
 	top: 0px !important;
 	width: 0px !important;
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    #introProduct{
+        background-color: #F24258;
+        height: 250px;
+        text-align: center;
+        color: white;
+        line-height: 200px;
+    }
+
+    #descriptionCompany{
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        margin-left: 20px;
+        width: 200px;
+        text-align: left;
+        color:#5A5959;
+        font-size: 19px;
+    }
+
+    #triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 400px 0 0 400px;
+        border-color: transparent transparent transparent white;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        box-shadow: 30px;
+    }
 }

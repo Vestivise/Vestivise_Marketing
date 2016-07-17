@@ -2,6 +2,8 @@
 
 <html>
 <head>
+	<link rel="shortcut icon" type="image/png" href="{% static 'media/favicon.jpg' %}"/>
+
 	<title>Vestivise</title>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700,800,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="{% static 'build/css/dashboard.css' %}">
@@ -134,16 +136,29 @@
 					</div>					
 				</div>		
 				<div class="row">
-					<div class="input-field col m12">
-						<form id="submitEmail">
+					<form id="submitEmail">
+						<div class="input-field col m12">
+							<i style="color:#F24258;" class="material-icons prefix">perm_identity</i>
+							<input required="" aria-required="true" name='firstName' id="firstName" type="text" class="validate">
+	          				<label for="firstName">First Name</label>
+          				</div>			
+
+						<div class="input-field col m12">
+	          				<i style="color:#F24258;" class="material-icons prefix">perm_identity</i>
+							<input required="" aria-required="true" name='lastName' id="lastName" type="text" class="validate">
+	          				<label for="lastName">Last Name</label>		
+						</div>
+
+						<div class="input-field col m12">
 							<i style="color:#F24258;" class="material-icons prefix">email</i>
-							<input name='email' id="email" type="email" class="validate">
+							<input required="" aria-required="true" name='email' id="email" type="email" class="validate">
 	          				<label for="email">Email</label>	
-	          				<button class="btn waves-effect waves-light" type="submit">Submit
-	    						<i class="material-icons right">send</i>
-	  						</button>
-						</form>
-					</div>			
+	          			</div>
+
+          				<button class="btn waves-effect waves-light" type="submit">Submit
+    						<i class="material-icons right">send</i>
+  						</button>
+					</form>
 				</div>		
 			</div>
 		</div>
@@ -154,8 +169,7 @@
 		<div class="modal-content">
 			<h4>Know anyone else?</h4>
 			<p>
-				Invite some friends! If at least one of them sign up you get the <span style="color: #2e8ece;">Insights 
-				(2 accounts, the additional insight modules)</span> tier for free!
+				Invite some friends! If at least one of them sign up you get the tier for free! <span style="color: #2e8ece;">Insights (2 accounts, the additional insight modules)</span>
 			</p>
 			<div class="container">
 				<div class="row">
@@ -207,15 +221,34 @@
 		e.preventDefault();
 
 		var email = $('#email').val();
-		if(!email){
-			return;
-		}
-
-		var data = {
+		var firstName = $('#firstName').val();
+		var lastName = $('#lastName').val();
+		
+		var mailingListPayload = {
 			email : email,
-			csrfmiddlewaretoken: '{{ csrf_token }}'
-		}
-	$('#modal1').openModal();
+			csrfmiddlewaretoken: '{{ csrf_token }}',
+			firstName : firstName,
+			lastName : lastName
+		};
+
+		var mailingListSubscribe = $.ajax({
+										url: '{% url "email-list" %}',
+										type: 'POST',
+										data: mailingListPayload,
+									});
+		
+		mailingListSubscribe
+		.done(function(){
+			console.log('success');
+		})
+		.fail(function(e){
+			console.log(e);
+		})
+		.always(function(){
+			$('#modal1').openModal();
+		});
+		
+	});
 
 	$('#submitReferal').click(function(e){
 		e.preventDefault();
@@ -232,61 +265,25 @@
 				csrfmiddlewaretoken: '{{ csrf_token }}',
 				refree: $('#email').val()
 			}
-		
+			$.ajax({
+				url: '{% url "referal-list" %}',
+				type: 'POST',
+				data: data,
+			})
+			.done(function() {
+				console.log("success");
+			})
+			.fail(function() {
+				console.log("error");
+			})
+			.always(function() {
+				console.log("complete");
+			});
 			
 		});
 	});
 
  	var hidden = false;
-	// $('.innerBR').click(function(){
-
-	// 	if(!hidden){
-	// 		$('#blueContent').hide();
-	// 		$('#purpleContent').hide();
-	// 		$('#greenContent').hide();
-
-	// 		$('.module.green').hide();
-	// 		$("body").css("background-color","#FF9800");
-
-	// 		$('.module.orange').animate({
-	// 			width: "100%",
-	// 			height: "100%",
-	// 		}, {
-	// 			duration: 1000,
-	// 			step: function(){
-	// 				$("#assetBreakMod").highcharts().reflow();
-	// 			},
-	// 			done: function(){
-	// 				$('.module.purple').hide();
-	// 				$('.module.blue').hide();
-	// 				hidden = true;
-	// 			}
-	// 		});
-	// 	}
-	// 	else{
-	// 		$('.module.purple').show();
-	// 		$('.module.blue').show();
-
-	// 		$('.module.orange').animate({
-	// 			width: "50%",
-	// 			height: "50%",
-	// 		}, {
-	// 			duration: 1000,
-	// 			step: function(){
-	// 				$("#assetBreakMod").highcharts().reflow();
-	// 			},
-	// 			done:function(){
-	// 				$('.module.green').show();
-	// 				$('#blueContent').show();
-	// 				$('#purpleContent').show();
-	// 				$('#greenContent').show();
-	// 				hidden = false;
-	// 			}
-	// 		});
-	// 	}
-		
-	// });
-
 	var toggleVar = 0;
 
 	$('#toggleMod').click(function() {
@@ -325,7 +322,7 @@
 	
 
 	$('#getStarted').click(function() {
-   		var offset = 20; //Offset of 20px
+   		var offset = 999; //Offset of 20px
 
     	$('html, body').animate({
         	scrollTop: $("#register").offset().top + offset

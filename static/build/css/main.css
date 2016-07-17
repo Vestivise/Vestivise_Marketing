@@ -323,7 +323,6 @@ section {
 ********About CSS*******
 **************************/
 #about-us {
-  background-image: url(../images/about-bg.jpg);
   padding: 60px 0;
 }
 
@@ -584,7 +583,6 @@ section {
 **************************/
 #features {
   text-align: center;
-  background-image: url(../images/features-bg.jpg);
 }
 
 #features i {
@@ -659,7 +657,7 @@ section {
 ********Twitter CSS*******
 **************************/
 #twitter {
-  background-image: url(../images/twitter-bg.jpg);
+  
 }
 
 #twitter > div {
@@ -851,7 +849,6 @@ section {
 **************************/
 
 #contact {
-  padding-top: 45px;
   padding-bottom: 0;
 }
 
@@ -860,7 +857,7 @@ section {
 }
 
 #contact-us {
-  background-image:url(../images/contact-bg.jpg);
+  background-image:url(../../media/images/contact-bg.jpg);
   padding-bottom: 90px; 
 }
 
