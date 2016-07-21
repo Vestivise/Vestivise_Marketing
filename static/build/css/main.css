@@ -12,8 +12,9 @@
 **************************/
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
   line-height: 24px;
   color: #666;
   background-color: #fff;
@@ -92,10 +93,6 @@ a:focus,
 a:hover {
   text-decoration: none;
   outline: none
-}
-
-section {
-  padding: 90px 0;
 }
 
 .heading {
@@ -295,6 +292,11 @@ section {
 	height: 80vh;
 	max-width: 90vw;
 }
+
+.singleFeature{
+	text-align:left;
+	padding-bottom: 0.5em;
+}
 /*************************
 ********Service CSS*******
 **************************/
@@ -352,10 +354,6 @@ section {
 #about-us .lead {
   font-size: 16px;
   margin-bottom: 10px;
-}
-
-#about-us h1 {
-  margin-bottom: 30px;
 }
 
 .progress{
@@ -974,23 +972,30 @@ ul.address {
 #footer .social-icons ul li a.envelope:hover {
   background-color: #CECB26;
 }
-
 #footer .social-icons ul li a.facebook:hover {
   background-color: #3b5999;
 }
 #footer .social-icons ul li a.twitter:hover {
   background-color: #2ac6f7;
 }
-#footer .social-icons ul li a.dribbble:hover {
-  background-color: #ff5b92;
-}
 #footer .social-icons ul li a.linkedin:hover {
-  background-color: #f34258;
+  background-color: #007bb5;
 }
 #footer .social-icons ul li a.tumblr:hover {
-  background-color: #ff6b00;
+  background-color: #36465d;
 }
-
+#footer .social-icons ul li a.instagram:hover {
+  background-color: #e95950;
+}
+#footer .social-icons ul li a.youtube:hover {
+  background-color: #e52d27;
+}
+#footer .social-icons ul li a.pinterest:hover {
+  background-color: #cb2027;
+}
+#footer .social-icons ul li a.pinterest:hover {
+  background-color: #cb2027;
+}
 /*Presets*/
 
 
