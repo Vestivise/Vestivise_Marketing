@@ -59,7 +59,7 @@
             <span class="icon-bar"></span>
           </button>
           <a href="#">
-          <h1 style="font-family: 'Lato', sans-serif; color:#fff; size:1.5em;">Vestivise</h1>
+          <h1 style="font-family: 'Lato', sans-serif; color:#fff; size:1.5em; padding-left:0.2em;">Vestivise</h1>
           </a>                    
         </div>
         <div class="collapse navbar-collapse">
@@ -80,7 +80,7 @@
       <br><br>
       <br><br>
       <div class="col-sm-6">
-    <img src="{% static 'media/images/line.jpg' %}" alt="" style="width:25vw; overflow:hidden;">
+    <img src="{% static 'media/images/line.jpg' %}" alt="" style="min-width:24vw; max-width:100%; overflow:hidden;">
     </div>
       <div class="col-sm-6">
       <h2 style="color:black;">Purpose</h2>
@@ -93,8 +93,8 @@
     </div>
     </div>
   </section><!--/#purpose-->
-  <section id="features">
-    <div class="container">
+  <section id="features" style="background:rgba(245,245,245,1.00)">
+    <div class="container" >
       <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
       <div class="row">
       <br><br>
@@ -103,17 +103,17 @@
       <br><br>
           <div class="text-center col-sm-6">
             <h2>Features</h2>
-        <p align="left">Vestivise tells you how your investments are doing clearly and concisely. Vestivise is able to calculate the past and projected performance of your assets and to help you understand how your finances are doing. Vestivise is quick, intuitive, and– most importantly– accurate. Look at the <a href="http://app.vestivise.com" target="_blank">Vestivise demo</a> to see some of our features:
+        <p align="left">Vestivise shows you how your investments are doing clearly and consciscely. The Vestivise summary gives a complete overview of your assets. Vestivise is quick, intutitive, and– most importantly- accurate. Take a look at the <a href="http://app.vestivise.com" target="_blank">Vestivise demo</a> to see some of our features:
         </p>
         <ul  class = "featuresList">
         <li class="singleFeature">An elegant but comprehensive overview of your investments.</li>
-        <li class="singleFeature">Performance evaluation for your entire investment portfolio using the industry-standard Sharpe and Information Ratios.</li>
+        <li class="singleFeature">Performance evaluation for your entire investment portfolio using industry standards.</li>
         <li class="singleFeature">Risk characterization and estimation to help you understand how you're investing.</li>
-        <li class="singleFeature">Fee comparisons to help you understand how much you're paying for asset management.</li>
+        <li class="singleFeature">Fee transparency to show you exactly what you're paying.</li>
         </ul>
       </div>
       <div class="col-sm-6">
-    <img src="{% static 'media/images/pie.jpg' %}" alt="" style="width:27vw; overflow:hidden;">
+    <img src="{% static 'media/images/pie.jpg' %}" alt="" style="min-width:27vw; max-width:100%;  overflow:hidden;">
     </div>
     </div>
     </div>
@@ -138,7 +138,7 @@
   <footer id="footer">
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="container text-center">
-        <div class="social-icons">
+        <div class="social-icons" >
           <ul>
             <li><a class="envelope" href="mailto:hello@vestivise.com" target="_blank"><i class="fa fa-envelope-square"></i></a></li>
             <li><a class="twitter" href="https://twitter.com/vestivise" target="_blank"><i class="fa fa-twitter-square"></i></a></li> 
@@ -151,8 +151,9 @@
           </ul>
         </div>
         <br>
-        <p>&copy; 2016 Vestivise, Inc. All rights reserved. Terms, conditions, pricing, fees, service, and support options subject to change without notice.</p><p> <a class="flink" href="">Support</a> • <a  class="flink" href="">Terms of Use</a> • <a class="flink" href="">Security</a> • <a class="flink" href="">Press</a> • <a class="flink" href="">About Vestivise</a>
+        <p> <a class="flink" href="">Support</a> • <a  class="flink" href="">Terms of Use</a> • <a class="flink" href="">Security</a> • <a class="flink" href="">Press</a> • <a class="flink" href="">About Vestivise</a>
 </p>
+        <p>&copy; 2016 Vestivise, Inc. All rights reserved. Terms, conditions, pricing, fees, service, and support options subject to change without notice.</p>
       </div>
     </div>
     <div class="footer-bottom">
