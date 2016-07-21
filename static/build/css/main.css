@@ -16,8 +16,12 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  color: #666;
+  color: #333;
   background-color: #fff;
+}
+
+.flink{
+	color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
