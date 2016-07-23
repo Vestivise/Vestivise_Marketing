@@ -25,9 +25,6 @@ SECRET_KEY = '691(xx(-h%x9x-ms3l8=#$zfervit+lf5&tc=o&t_v$fo463y@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
