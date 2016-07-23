@@ -1,4 +1,5 @@
 env
 *.pyc
+Vestivise_Marketing/*.pyc
 
 templates/index (original).html
