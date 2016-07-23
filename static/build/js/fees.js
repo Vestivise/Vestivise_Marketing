@@ -82,5 +82,4 @@ var gaugeOptions = {
                 y: 0
             },
         }]
-
     }));
