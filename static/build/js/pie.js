@@ -1,4 +1,3 @@
-
 function hideLabel(){
    var chart = $('#assetBreakMod').highcharts();
    var opt = chart.series[0].options;

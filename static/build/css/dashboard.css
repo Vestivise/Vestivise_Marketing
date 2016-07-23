@@ -53,28 +53,14 @@ span {
 }
 
 
-#triangle{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 400px 0 0 1400px;
-    border-color: transparent transparent transparent white;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    text-align: center;
-    box-shadow: 30px;
-}
-
 #descriptionCompany{
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    margin-left: 20px;
-    width: 700px;
-    text-align: left;
-    color:#5A5959;
+    color: white;
     font-size: 28px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: 20px;
+    padding-top: 30px;
+    margin-bottom: 0px;
 }
 
 .vestBar{
