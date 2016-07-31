@@ -11,7 +11,6 @@
   <meta name="author" content="">
   <title>Vestivise</title>
   <link href="{% static 'build/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'build/css/animate.min.css' %} " rel="stylesheet"> 
   <link href="{% static 'build/css/font-awesome.min.css' %}" rel="stylesheet">
   <link href="{% static 'build/css/lightbox.css' %}" rel="stylesheet">
   <link href="{% static 'build/css/main.css' %}" rel="stylesheet">
@@ -40,12 +39,12 @@
           <div class="caption">
             <h1 class="animated fadeInLeftBig"><span>Vestivise</span></h1>
              <p class="animated fadeInRightBig">SIMPLE INVESTMENT REPORTING</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#purpose">Learn More</a>
+            <a id="tohash" class="btn btn-start animated fadeInUpBig" href="#purpose">Learn More</a>
           </div>
         </div>
       </div>
 
-      <a id="tohash" href="#purpose"><i class="fa fa-angle-down"></i></a>
+      <a id="tohash1" href="#purpose"><i class="fa fa-angle-down"></i></a>
     </div><!--/#home-slider-->
   </header><!--/#home-->
   
@@ -80,7 +79,7 @@
       <br><br>
       <div class="col-sm-6">
       <br>
-    <img src="{% static 'media/images/line.jpg' %}" alt="" style="min-width:24vw; max-width:100%; overflow:hidden;">
+    <img src="{% static 'media/images/line.jpg' %}" alt="" style="min-width: 80%; max-width:100%;">
     </div>
       <div class="col-sm-6">
       <h2 style="color:black;">Purpose</h2>
@@ -97,6 +96,7 @@
   
   <section id="features" style="background:rgba(245,245,245,1.00)">
     <div class="container" >
+    <br><br><br>
       <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
       <div class="row">
           <div class="text-center col-sm-6">
@@ -112,7 +112,7 @@
       </div>
       <div class="col-sm-6">
       <br>
-    <img src="{% static 'media/images/pie.jpg' %}" alt="" style="min-width:27vw; max-width:100%;  overflow:hidden;">
+    <img src="{% static 'media/images/pie.jpg' %}" alt="" style="min-width: 80%; max-width:100%;">
     </div>
     </div>
     </div>
@@ -128,7 +128,7 @@
           <p align="left">Our report is just the beginning. Subscribe to our blog now to receive updates on financial news, learn more about investing, and stay informed about product features.</p>
           <p align="left">For Vestivise users, our blog integrates aspects of your investment report into the financial news and investing education content so that everything we send remains useful and personally tailored to you.
           </p>
-          <a data-scroll class="btn btn-start animated fadeInUpBig" href="http://blog.vestivise.com" target="_blank">go to the blog now</a>
+          <a data-scroll class="btn btn-start animated fadeInUpBig" href="http://blog.vestivise.com" target="_blank" style="font-size:large;">go to the blog now</a>
         </div>
       </div>
     </div>
@@ -151,7 +151,7 @@
         <br>
         <p> <a class="flink" href="">Support</a> • <a  class="flink" href="">Terms of Use</a> • <a class="flink" href="">Security</a> • <a class="flink" href="">Press</a> • <a class="flink" href="">About Vestivise</a>
 </p>
-        <p>&copy; 2016 Vestivise, Inc. All rights reserved. Terms, conditions, pricing, fees, service, and support options subject to change without notice.</p>
+        <p>&copy; 2016 Vestivise, Inc. All rights reserved.</p>
       </div>
     </div>
   </footer>

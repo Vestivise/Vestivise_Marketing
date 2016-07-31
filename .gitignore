@@ -3,3 +3,9 @@ env
 Vestivise_Marketing/*.pyc
 
 templates/index (original).html
+
+*.pyc
+
+*.pyc
+
+*.pyc
