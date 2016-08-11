@@ -4,6 +4,11 @@ Vestivise_Marketing/*.pyc
 
 templates/index (original).html
 
+<<<<<<< HEAD
+templates/landingPage(josh's verision).html
+
+*.pyc
+=======
 *.pyc
 
 *.pyc
@@ -11,3 +16,4 @@ templates/index (original).html
 *.pyc
 
 templates/landingPage(josh's verision).html
+>>>>>>> master
