@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Vestivise</title>
+  <title>Vestivise – Simple Investment Reporting</title>
   <link href="{% static 'build/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'build/css/font-awesome.min.css' %}" rel="stylesheet">
   <link href="{% static 'build/css/lightbox.css' %}" rel="stylesheet">
@@ -63,7 +63,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-          	<li><a href="https://vestivise.com/subscribe">Subscribe</a>         
+          	<li><a href="https://vestivise.com/subscribe">Subscribe</a></li>         
             <li><a href="https://blog.vestivise.com">Blog</a></li>
             <li><a href="https://www.vestivise.com/demo/" target="_blank">Demo</a></li>
             <li><a href="https://app.vestivise.com/signUp">Sign Up Now</a></li>
@@ -71,6 +71,29 @@
         </div>
       </div>
     </div><!--/#main-nav-->
+   <section id="past" style="background:rgba(245,245,245,1.00)"> 
+    <div class="container">
+    	<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+      <div class="row">
+      <br><br>
+      <br><br>
+      <br><br>
+      <div class="col-sm-6">
+      <h2 style="color:black;">A Thing of the Past</h2>
+            <p align="left" style=" font-weight:bold; font-size:larger; line-height: 1.5em;">Investment companies are confusing you.
+            </p>
+            <p align="left">You want essentials, not a page filled with numbers. You want to grasp the big picture, without having to know everything first. Traditional reports will be a thing of the past: interactive graphics show you how your investments are doing and give you the tools to completely understand your portfolio's performance. With Vestivise, you can quickly make sense of your finances.
+            </p>
+    </div>
+    <div class="col-sm-6">
+      <br>
+    <img src="{% static 'media/images/report.jpg' %}" alt="" style="min-width: 80%; max-width:100%;">
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+  </section><!--/#purpose-->
   <section id="purpose"> 
     <div class="container">
     	<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
@@ -85,7 +108,7 @@
       <div class="col-sm-6">
       <h2 style="color:black;">Purpose</h2>
             <p align="left" style="font-weight:bold;">Our hope is that every time you view your online report, you will understand your investments.</p>
-            <p align="left">Our mission is simple: we want to help the millions of investors understand their investments regardless of their financial knowledge. We hope that by bringing investors to a more concrete understanding of their investments, we can chip away at the 92% who do not reach their retirement goals.
+            <p align="left">Our mission is simple: we want to help the millions of investors understand their investments regardless of their financial knowledge. We hope that by bringing investors to a more concrete understanding of their investments, we can chip away at the <a href="https://blog.vestivise.com/we-fight-for-the-92/">92%</a> who do not reach their retirement goals.
             </p>
             <p align="left">Our report shows four categories of information: assets, returns, risks, and costs. In each category, you will find the relevant and essential details you need to be more informed and at peace with your money. Vestivise will create a whole new kind of financial engagement, so that when your time comes to retire, you will be fully prepared and informed.</p>
     </div>
@@ -105,10 +128,10 @@
         <p align="left">The Vestivise summary gives a complete overview of your assets. Our application is quick, intuitive, and extremely accurate. Our secure account linkage process automatically pulls your personal investment information upon creating an account. Take a look at our <a href="https://www.vestivise.com/demo/" target="_blank">demo</a> to find out more! You can also <a href="https://app.vestivise.com/">sign up now</a> for a personalized investment report.
         </p>
         <ul  class = "featuresList">
-        <li class="singleFeature">An elegant but comprehensive overview of your investments.</li>
-        <li class="singleFeature">Performance evaluation for your entire investment portfolio using industry standards.</li>
-        <li class="singleFeature">Risk characterization and estimation to help you understand how you're investing.</li>
-        <li class="singleFeature">Fee transparency to show you exactly what you're paying.</li>
+        <li class="singleFeature">Simplicity in the presentation of information.</li>
+        <li class="singleFeature">Education to understand all the numbers.</li>
+        <li class="singleFeature">Aggregation of all your investment accounts.</li>
+        <li class="singleFeature">Accessibility with one place for live updates.</li>
         </ul>
       </div>
       <div class="col-sm-6">
@@ -150,16 +173,73 @@
           </ul>
         </div>
         <br>
-        <p> <a class="flink" href="">Support</a> • <a  class="flink" href="">Terms of Use</a> • <a class="flink" href="">Security</a> • <a class="flink" href="">Press</a> • <a class="flink" href="">About Vestivise</a>
+        <p> <a class="flink" href="mailto:support@vestivise.com">Support</a> • <a  class="flink" href="">Terms of Use</a> • <a class="flink" href="">Security</a> • <a class="flink" href="mailto:josh@vestivise.com">Press</a> • <a class="flink" href="javascript:showDiv('aboutModal')">About Vestivise</a>
 </p>
         <p>&copy; 2016 Vestivise, Inc. All rights reserved.</p>
       </div>
     </div>
+    <div id="aboutModal">
+    <div id="aboutModal-content">
+    	<a id="closeLink" href="javascript:close()" style="float: right;">x</a>
+        <br><br>
+       <p style="color:black; letter-spacing:110%;">Vestivise is my way of helping out my parents. My family. My friends. Anyone stuck with improper allocations or forced into paying unnecessary fees just so they may retire comfortably. You see, this is personal for me. Come back to the summer of 2013. I was a junior in high school with a thirst for financial knowledge. Intrigued by investing, I asked my parents to share with me more about their investments. Much to my dismay, neither one could give a clear picture of their portfolios. So I took a look at the quarterly reports given by their asset managers for myself. Armed with lots of questions, I read through the many pages of small printed text and unhelpful black and white graphs. I knew exactly what I was looking for, yet I couldn’t even uncover some of the most fundamental information.</p><p style="color:black;">
+A short three years later, I’m proud to present you with Vestivise. An answer to those questions I had and the solution to a status quo that continually leaves investors feeling confused. At Vestivise, our mission is simple: we want to help the millions of investors understand their investments regardless of their financial knowledge. We hope that by bringing investors to a more concrete understanding of their investments, we can chip away at the 92% who do not reach their retirement goals.</p><p style="color:black;">
+Our interactive web report shows four categories of information: assets, returns, risks, and costs. In each category, you will find the relevant and essential details you need to be more informed and at peace with your money. Our secure account linkage process automatically pulls your personal investment information upon creating an account.</p><p style="color:black;">
+This information is important; it represents a person’s freedom, future financial security, one’s conception of success. To continue in the dark is to continue allowing extraneous forces shape your future without knowing anything about it at all. Every time you view your online report, you will understand your investments, but we aspire to much more. Vestivise will create a whole new kind of financial engagement, so that when your time comes to retire, you will be fully prepared and informed.</p>
+– Josh, CEO & Founder
+    <div class="container" >
+    <br><br><br>
+      <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+      <div class="row">
+      <div class="col-sm-6">
+      <br>
+    <img src="{% static 'media/images/josh.jpg' %}" alt="" style="min-width: 80%; max-width:100%;">
+    <ul >
+    <li style="display: inline;"><a class="facebook" href="https://www.facebook.com/profile.php?id=100001217204947" target="_blank"><i class="fa fa-facebook-square"></i></a> </li>
+    <li style="display: inline;"><a class="linkedin" href="https://www.linkedin.com/in/joshgelinas" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+    </ul>
+    </div>
+    <div class="text-center col-sm-6">
+    <br>
+           <p style="color:black;" align="left">Josh is deeply interested in the intersection of finance and technology. His previous experiences at an upstart charity and a newly formed venture capital firm have taught him the challenges of building something from the ground up. At the core of his perspective toward finance is a never waning desire to decipher Wall Street's "black box" for the common person. Josh's ultimate goal in any venture he undertakes is to provide a product that is meaningful, that makes life better in a tangible way for the customer. He is currently on leave from studying Economics at New York University.</p>
+      </div>
+    </div>
+    </div>
+    </div>
+		</div>
+    </div>
   </footer>
-
   <script type="text/javascript" src="{% static 'build/js/jquery.js' %}"></script>
   <script type="text/javascript" src="{% static 'build/js/bootstrap.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'build/js/lightbox.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'build/js/main.js' %}"></script>
+  <script type="text/javascript">
+
+var span = document.getElementsByClassName("close")[0];
+
+function showDiv(d) {
+    var e = document.getElementById(d);
+    e.style.display = 'block';
+}
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+	
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+  </script>
 </body>
 </html>
