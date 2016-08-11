@@ -180,7 +180,7 @@
     </div>
     <div id="aboutModal">
     <div id="aboutModal-content">
-    	<a id="closeLink" href="javascript:close()" style="float: right;">x</a>
+    	<a id="closeLink" href="javascript:close();" style="float: right;">x</a>
         <br><br>
        <p style="color:black; letter-spacing:110%;">Vestivise is my way of helping out my parents. My family. My friends. Anyone stuck with improper allocations or forced into paying unnecessary fees just so they may retire comfortably. You see, this is personal for me. Come back to the summer of 2013. I was a junior in high school with a thirst for financial knowledge. Intrigued by investing, I asked my parents to share with me more about their investments. Much to my dismay, neither one could give a clear picture of their portfolios. So I took a look at the quarterly reports given by their asset managers for myself. Armed with lots of questions, I read through the many pages of small printed text and unhelpful black and white graphs. I knew exactly what I was looking for, yet I couldn’t even uncover some of the most fundamental information.</p><p style="color:black;">
 A short three years later, I’m proud to present you with Vestivise. An answer to those questions I had and the solution to a status quo that continually leaves investors feeling confused. At Vestivise, our mission is simple: we want to help the millions of investors understand their investments regardless of their financial knowledge. We hope that by bringing investors to a more concrete understanding of their investments, we can chip away at the 92% who do not reach their retirement goals.</p><p style="color:black;">
@@ -194,14 +194,14 @@ This information is important; it represents a person’s freedom, future financ
       <div class="col-sm-6">
       <br>
     <img src="{% static 'media/images/josh.jpg' %}" alt="" style="min-width: 80%; max-width:100%;">
-    <ul >
-    <li style="display: inline;"><a class="facebook" href="https://www.facebook.com/profile.php?id=100001217204947" target="_blank"><i class="fa fa-facebook-square"></i></a> </li>
-    <li style="display: inline;"><a class="linkedin" href="https://www.linkedin.com/in/joshgelinas" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-    </ul>
     </div>
     <div class="text-center col-sm-6">
     <br>
            <p style="color:black;" align="left">Josh is deeply interested in the intersection of finance and technology. His previous experiences at an upstart charity and a newly formed venture capital firm have taught him the challenges of building something from the ground up. At the core of his perspective toward finance is a never waning desire to decipher Wall Street's "black box" for the common person. Josh's ultimate goal in any venture he undertakes is to provide a product that is meaningful, that makes life better in a tangible way for the customer. He is currently on leave from studying Economics at New York University.</p>
+           <ul >
+    <li style="display: inline;"><a class="facebook" href="https://www.facebook.com/profile.php?id=100001217204947" target="_blank"><i class="fa fa-facebook-square"></i></a> </li>
+    <li style="display: inline;"><a class="linkedin" href="https://www.linkedin.com/in/joshgelinas" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+    </ul>
       </div>
     </div>
     </div>
@@ -215,29 +215,15 @@ This information is important; it represents a person’s freedom, future financ
   <script type="text/javascript" src="{% static 'build/js/main.js' %}"></script>
   <script type="text/javascript">
 
-var span = document.getElementsByClassName("close")[0];
 
 function showDiv(d) {
     var e = document.getElementById(d);
     e.style.display = 'block';
 }
 
-// When the user clicks on the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-	
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+function close(){
+	var e = document.getElementById("aboutModal");
+	e.style.display = 'none';
 }
 
   </script>
