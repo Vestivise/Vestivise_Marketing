@@ -20,7 +20,7 @@ body {
   background-color: #fff;
 }
 
-#aboutModal{
+#securityModal{
 	display: none;
 	position: fixed;
 	z-index:9999; 
@@ -32,7 +32,7 @@ body {
 	background-color: rgba(250,250,250,0.95);
 }
 
-#aboutModal-content{
+#securityModal-content{
 	background-color: white;
 	margin: auto;
 	padding-left: 3em;

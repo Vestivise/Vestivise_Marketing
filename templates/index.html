@@ -177,15 +177,42 @@
           </ul>
         </div>
         <br>
-        <p> <a class="flink" href="mailto:support@vestivise.com">Support</a> • <a  class="flink" href="">Terms of Use</a> • <a class="flink" href="">Security</a> • <a class="flink" href="mailto:josh@vestivise.com">Press</a> • <a class="flink" href="https://blog.vestivise.com/2016/07/10/introducing-vestivise/">About Vestivise</a>
+        <p> <a class="flink" href="mailto:support@vestivise.com">Support</a> • <a  class="flink" href="">Terms of Use</a> • <a class="flink" href="javascript:showDiv('securityModal')">Security</a> • <a class="flink" href="mailto:josh@vestivise.com">Press</a> • <a class="flink" href="https://blog.vestivise.com/2016/07/10/introducing-vestivise/">About Vestivise</a>
 </p>
         <p>&copy; 2016 Vestivise, Inc. All rights reserved.</p>
       </div>
+    </div>
+    <div id="securityModal">
+    <div id="securityModal-content">
+    	<a id="closeLink" href="javascript:close();" style="float: right;">x</a>
+        <br><br>
+        <h2>Security</h2>
+       <p style="color:black; letter-spacing:110%;">Vestivise is a secure platform to understand your finances and does not internally store sensitive information such as users' bank account login information, account numbers, or passwords. Your financial information is securely retrieved when you log on using industry-standard encryption techniques.<br><br>
+       Internally, Vestivise uses cryptographic signing to verify the authenticity and integrity of requests to our servers. Transport layer security is additionally implemented on all of our web pages to ensure your privacy is protected and to prevent third party interception or manipulation of data. Secure collection of data from other financial systems is achieved using encrypted communication during short, fixed-interval sessions activated live when a given user logs in.</p>
+       <br><br>
+    </div>
     </div>
   </footer>
   <script type="text/javascript" src="{% static 'build/js/jquery.js' %}"></script>
   <script type="text/javascript" src="{% static 'build/js/bootstrap.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'build/js/lightbox.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'build/js/main.js' %}"></script>
+  <script type="text/javascript">
+
+
+function showDiv(d) {
+    var e = document.getElementById(d);
+    e.style.display = 'block';
+	document.body.style.overflow = 'hidden';
+	e.style.overflow = 'scroll';
+}
+
+function close(){
+	var e = document.getElementById("securityModal");
+	e.style.display = 'none';
+	document.body.style.overflow = 'auto';
+}
+
+  </script>
 </body>
 </html>
