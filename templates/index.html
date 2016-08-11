@@ -9,9 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Vestivise</title>
+  <title>Vestivise – Simple Investment Reporting</title>
   <link href="{% static 'build/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'build/css/animate.min.css' %} " rel="stylesheet"> 
   <link href="{% static 'build/css/font-awesome.min.css' %}" rel="stylesheet">
   <link href="{% static 'build/css/lightbox.css' %}" rel="stylesheet">
   <link href="{% static 'build/css/main.css' %}" rel="stylesheet">
@@ -40,12 +39,12 @@
           <div class="caption">
             <h1 class="animated fadeInLeftBig"><span>Vestivise</span></h1>
              <p class="animated fadeInRightBig">SIMPLE INVESTMENT REPORTING</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#purpose">Learn More</a>
+            <a id="tohash" class="btn btn-start animated fadeInUpBig" href="#purpose">Learn More</a>
           </div>
         </div>
       </div>
 
-      <a id="tohash" href="#purpose"><i class="fa fa-angle-down"></i></a>
+      <a id="tohash1" href="#purpose"><i class="fa fa-angle-down"></i></a>
     </div><!--/#home-slider-->
   </header><!--/#home-->
   
@@ -63,14 +62,41 @@
           </a>                    
         </div>
         <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">         
+          <ul class="nav navbar-nav navbar-right">
+          	<li><a href="https://vestivise.com/subscribe">Subscribe</a></li>         
             <li><a href="https://blog.vestivise.com">Blog</a></li>
-            <li><a href="https://vestivise.com/demo" target="_blank">Demo</a></li>
+            <li><a href="https://www.vestivise.com/demo/" target="_blank">Demo</a></li>
             <li><a href="https://app.vestivise.com/signUp">Sign Up Now</a></li>
           </ul>
         </div>
       </div>
     </div><!--/#main-nav-->
+    <section id="slug">
+       <h2  align="center" style="margin: 30% 8em 30% 8em; font-weight: 300; letter-spacing: 120%; line-height: 1.5em;">Most people don’t reach their investment goals. We keep investment reporting simple so that in the good times and bad, we will be there to guide you.</h2>
+  </section><!--/#blog-->
+   <section id="past" style="background:rgba(245,245,245,1.00)"> 
+    <div class="container">
+    	<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+      <div class="row">
+      <br><br>
+      <br><br>
+      <br><br>
+      <div class="col-sm-6">
+      <h2 style="color:black;">A Thing of the Past</h2>
+            <p align="left" style="font-weight:bold; font-size:large; line-height: 1.5em;">Investment companies are confusing you.
+            </p>
+            <p align="left" style="font-size:large;">You want essentials, not a page filled with numbers. You want to grasp the big picture, without having to know everything first. Traditional reports will be a thing of the past: interactive graphics show you how your investments are doing and give you the tools to completely understand your portfolio's performance. With Vestivise, you can quickly make sense of your finances.
+            </p>
+    </div>
+    <div class="col-sm-6">
+      <br>
+    <img src="{% static 'media/images/report.jpg' %}" alt="" style="min-width: 80%; max-width:100%;">
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+  </section><!--/#purpose-->
   <section id="purpose"> 
     <div class="container">
     	<div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
@@ -80,14 +106,14 @@
       <br><br>
       <div class="col-sm-6">
       <br>
-    <img src="{% static 'media/images/line.jpg' %}" alt="" style="min-width:24vw; max-width:100%; overflow:hidden;">
+    <img src="{% static 'media/images/line.jpg' %}" alt="" style="min-width: 80%; max-width:100%;">
     </div>
       <div class="col-sm-6">
       <h2 style="color:black;">Purpose</h2>
-            <p align="left" style="font-weight:bold;">Our hope is that every time you view your online report, you will understand your investments.</p>
-            <p align="left">Our mission at Vestivise is to help people understand their investments. For anyone who lacks financial knowledge and for those who are afraid of reaching their retirement goals (92% of active investors don't), Vestivise is the place to go to find simplicity, education, and understanding of all your investments at any time.
+            <p align="left" style="font-weight:bold; font-size:large;">Every time you view your interactive report, you will understand your investments.</p>
+            <p align="left" style="font-size:large;">Our mission is simple: we want to help the millions of investors understand their investments regardless of their financial knowledge. We hope that by bringing investors to a more concrete understanding of their investments, we can chip away at the <a href="https://blog.vestivise.com/we-fight-for-the-92/">92%</a> who do not reach their retirement goals.
             </p>
-            <p align="left">Our interactive web report shows four categories of information: assets, returns, risks, and costs. In each category, you will find the relevant and essential information you need to be more informed and at peace with your money.</p>
+            <p align="left" style="font-size:large;">Our report shows four categories of information: assets, returns, risks, and costs. In each category, you will find the relevant and essential details you need to be more informed and at peace with your money. Vestivise will create a whole new kind of financial engagement, so that when your time comes to retire, you will be fully prepared and informed.</p>
     </div>
     </div>
     </div>
@@ -97,22 +123,24 @@
   
   <section id="features" style="background:rgba(245,245,245,1.00)">
     <div class="container" >
+    <br><br><br>
       <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
       <div class="row">
           <div class="text-center col-sm-6">
             <h2>Features</h2>
-        <p align="left">Vestivise shows you how your investments are doing clearly and consciscely. The Vestivise summary gives a complete overview of your assets. Vestivise is quick, intutitive, and– most importantly- accurate. Take a look at the <a href="http://app.vestivise.com" target="_blank">Vestivise demo</a> to see some of our features:
+            <p align="left" style="font-weight:bold; font-size:large;">Vestivise shows you your investments clearly and concisely.</p>
+        <p align="left" style="font-size:large;">The Vestivise summary gives a complete overview of your assets. Our application is quick, intuitive, and extremely accurate. Our secure account linkage process automatically pulls your personal investment information upon creating an account. Take a look at our <a href="https://www.vestivise.com/demo/" target="_blank">demo</a> to find out more! You can also <a href="https://app.vestivise.com/">sign up now</a> for a personalized investment report.
         </p>
-        <ul  class = "featuresList">
-        <li class="singleFeature">An elegant but comprehensive overview of your investments.</li>
-        <li class="singleFeature">Performance evaluation for your entire investment portfolio using industry standards.</li>
-        <li class="singleFeature">Risk characterization and estimation to help you understand how you're investing.</li>
-        <li class="singleFeature">Fee transparency to show you exactly what you're paying.</li>
+        <ul  class = "featuresList" style="font-size:medium;">
+        <li class="singleFeature"><b>Simplicity</b> in the presentation of information.</li>
+        <li class="singleFeature"><b>Education</b> to understand all the numbers.</li>
+        <li class="singleFeature"><b>Aggregation</b> of all your investment accounts.</li>
+        <li class="singleFeature"><b>Accessibility</b> with one place for live updates.</li>
         </ul>
       </div>
       <div class="col-sm-6">
       <br>
-    <img src="{% static 'media/images/pie.jpg' %}" alt="" style="min-width:27vw; max-width:100%;  overflow:hidden;">
+    <img src="{% static 'media/images/pie.jpg' %}" alt="" style="min-width: 80%; max-width:100%;">
     </div>
     </div>
     </div>
@@ -125,10 +153,10 @@
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
           <div class="row">
           <h2>Blog</h2>
-          <p align="left">Our report is just the beginning. Subscribe to our blog now to receive updates on financial news, learn more about investing, and stay informed about product features.</p>
-          <p align="left">For Vestivise users, our blog integrates aspects of your investment report into the financial news and investing education content so that everything we send remains useful and personally tailored to you.
+          <p align="left" style="font-size:large;">Our report is just the beginning. <a href="https://vestivise.com/subscribe">Subscribe to our blog now</a> to receive updates on financial news, learn more about investing, and stay informed about product features.</p>
+          <p align="left" style="font-size:large;">For Vestivise users, our blog integrates aspects of your investment report into the financial news and investing education so that everything we send remains useful and personally tailored to you.
           </p>
-          <a data-scroll class="btn btn-start animated fadeInUpBig" href="http://blog.vestivise.com" target="_blank">go to the blog now</a>
+          <a data-scroll class="btn btn-start animated fadeInUpBig" href="https://blog.vestivise.com" target="_blank" style="font-size:larger;">go to the blog now</a>
         </div>
       </div>
     </div>
@@ -149,13 +177,12 @@
           </ul>
         </div>
         <br>
-        <p> <a class="flink" href="">Support</a> • <a  class="flink" href="">Terms of Use</a> • <a class="flink" href="">Security</a> • <a class="flink" href="">Press</a> • <a class="flink" href="">About Vestivise</a>
+        <p> <a class="flink" href="mailto:support@vestivise.com">Support</a> • <a  class="flink" href="">Terms of Use</a> • <a class="flink" href="">Security</a> • <a class="flink" href="mailto:josh@vestivise.com">Press</a> • <a class="flink" href="https://blog.vestivise.com/2016/07/10/introducing-vestivise/">About Vestivise</a>
 </p>
-        <p>&copy; 2016 Vestivise, Inc. All rights reserved. Terms, conditions, pricing, fees, service, and support options subject to change without notice.</p>
+        <p>&copy; 2016 Vestivise, Inc. All rights reserved.</p>
       </div>
     </div>
   </footer>
-
   <script type="text/javascript" src="{% static 'build/js/jquery.js' %}"></script>
   <script type="text/javascript" src="{% static 'build/js/bootstrap.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'build/js/lightbox.min.js' %}"></script>
