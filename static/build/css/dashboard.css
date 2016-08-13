@@ -78,20 +78,20 @@ span {
 	margin-bottom: 0px;
 }
 
-.module.orange{
-	background-color: #F19B2C;
+.module.assets{
+	background-color: #c5f1f2;
 }
 
-.module.green{
-	background-color: #61B67A;
+.module.risks{
+	background-color: #c5f1f2;
 }
 
-.module.purple{
-	background-color: #9A5CB4;
+.module.returns{
+	background-color: #c5f1f2;
 }
 
-.module.blue{
-	background-color: #3A99D8;
+.module.costs{
+	background-color: #c5f1f2;
 }
 
 #returnPerYearMod{
@@ -116,8 +116,8 @@ span {
 
 .modTitle{
 	position: absolute;
-	color: white;
-	/*font-weight: bold;*/
+	color: "#333366";
+	font-weight: bold;
 }
 
 .modTitle.L{

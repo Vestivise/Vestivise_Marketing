@@ -2,9 +2,10 @@
 
 <html>
 <head>
-	<title>Home</title>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700,800,900' rel='stylesheet' type='text/css'>
+	<title>Vestivise – Simple Investment Reporting</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="{% static 'build/css/dashboard.css' %}">
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'media/favicon.jpg' %}"/>
 
 	<!-- Compiled and minified CSS -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
@@ -21,7 +22,7 @@
 
 	<nav>
 	    <div class="nav-wrapper vestBar">
-      		<a href="#" class="brand-logo center"><img height="100%" width="230" src="{% static 'media/images/logo.jpg' %}" alt=""></a>
+      		<a href="#" class="brand-logo center"><img height="100%" src="{% static 'media/images/logo.svg' %}" alt=""></a>
 			<ul style="margin-right : 40px" id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="{% url 'subscribe' %}">Subscribe</a></li>
 			</ul>
@@ -30,9 +31,9 @@
 
   	<div class="moduleContainer">
   		<div class="row moduleRow">
-		<div class="col s12 m6 module orange">
+		<div id="asset" class="col s12 m6 module blue lighten-4">
 			
-			<div id="orangeContent">
+			<div id="assetContent">
 
 				<div id="toggleChart" class="fixed-action-btn">
 				    <a style="display: none;" id="toggleChartBtn" class="btn-floating blue waves-effect">
@@ -48,40 +49,28 @@
 
 				<div id="assetBreakMod"></div>
 				<p class="modTitle L">Assets</p>
-				<div class="fullScreen BR">
-	    			<div class="fullScreen innerBR"></div>
-				</div>
 			</div>
 			
 		</div>
-		<div class="col s12 m6 module green">
-			<div id="greenContent">
+		<div id="returns" class="col s12 m6 module blue lighten-4">
+			<div id="returnsContent">
 				<div id="returnPerYearMod"></div>
 				<p class="modTitle R">Returns</p>
-				<div class="fullScreen BL">
-	    			<div class="fullScreen innerBL"></div>
-				</div>	
 			</div>
 		</div>
 	</div>
 
 	<div class="row moduleRow">
-		<div class="col s12 m6 module purple">
-			<div id="purpleContent">
+		<div id="risks" class="col s12 m6 module blue lighten-4">
+			<div id="risksContent">
 				<div id="riskMod"></div>
 				<p class="modTitle L">Risks</p>
-				<div class="fullScreen TR">
-	    			<div class="fullScreen innerTR"></div>
-				</div>
 			</div>
 		</div>
-		<div class="col s12 m6 module blue">
-			<div id="blueContent">
+		<div id="costs" class="col s12 m6 module blue lighten-4">
+			<div id="costsContent">
 				<div id="feeMod"></div>
 				<p class="modTitle R">Costs</p>
-				<div class="fullScreen TL">
-	    			<div class="fullScreen innerTL"></div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -93,7 +82,7 @@
 	Highcharts.setOptions({
 		chart: {
         style: {
-            fontFamily: 'Raleway, sans-serif'
+            fontFamily: 'Lato, sans-serif'
         }
     }
 	});
@@ -106,28 +95,27 @@
 <script src="{% static 'build/js/sectionPie.js' %}"></script>
 
 <script>
- 	var hidden = false;
-	$('.innerBR').click(function(){
-
+	var hidden = false;
+	$('#asset').click(function(){
 		if(!hidden){
-			$('#blueContent').hide();
-			$('#purpleContent').hide();
-			$('#greenContent').hide();
+			$('#costsContent').hide();
+			$('#risksContent').hide();
+			$('#returnsContent').hide(); 
 
 			$('.module.green').hide();
 			$("body").css("background-color","#FF9800");
 
-			$('.module.orange').animate({
-				width: "100%",
-				height: "100%",
+			$('.asset').animate({
+				width: "100vw",
+				height: "100vh",
 			}, {
 				duration: 1000,
 				step: function(){
 					$("#assetBreakMod").highcharts().reflow();
 				},
 				done: function(){
-					$('.module.purple').hide();
-					$('.module.blue').hide();
+					$('.module.returns').hide();
+					$('.module.risks').hide();
 					hidden = true;
 				}
 			});
@@ -136,7 +124,7 @@
 			$('.module.purple').show();
 			$('.module.blue').show();
 
-			$('.module.orange').animate({
+			$('.module.asset').animate({
 				width: "50%",
 				height: "50%",
 			}, {
@@ -145,54 +133,14 @@
 					$("#assetBreakMod").highcharts().reflow();
 				},
 				done:function(){
-					$('.module.green').show();
-					$('#blueContent').show();
-					$('#purpleContent').show();
-					$('#greenContent').show();
+					$('.module.returns').show();
+					$('#costsContent').show();
+					$('#risksContent').show();
+					$('#returnsContent').show();
 					hidden = false;
 				}
 			});
 		}
-		
 	});	
-
-	var toggleVar = 0;
-
-	$('#toggleMod').click(function() {
-
-		if(toggleVar == 0){
-			$('#toggleChartBtn').show();
-			$('#assetBreakMod').highcharts().destroy();
-			$('#assetBreakMod').highcharts(sectorOpt);
-		}else{
-			$('#assetBreakMod').highcharts(assetOpt);
-			$('#toggleChartBtn').hide();
-		}
-
-		toggleVar = toggleVar == 0 ? 1 : 0;
-		
-	});
-
-	var dataToggle = 0;
-
-	$('#toggleChartBtn').click(function(){
-		var chart = $('#assetBreakMod').highcharts();
-		if(dataToggle == 0){
-			chart.setTitle({text: "Bond Sectors"});
-			chart.series[0].remove();
-			dataSeries[0].data = data2;
-			chart.addSeries(dataSeries[0]);
-		}else{
-			chart.setTitle({text: "Equity Sectors"});
-			chart.series[0].remove();
-			dataSeries[0].data = data1;
-			chart.addSeries(dataSeries[0]);
-		}
-		chart.redraw();
-		dataToggle = dataToggle == 0 ? 1 : 0;
-	});
-	
-
 </script>
-
 </html>

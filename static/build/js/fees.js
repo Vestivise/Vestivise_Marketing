@@ -2,13 +2,13 @@ var gaugeOptions = {
 
         chart: {
             type: 'solidgauge',
-            backgroundColor: "#3A99D8",
+            backgroundColor: "#BBDEFB",
         },
 
         title: {
-            text : '<p style="margin-top: 0" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="This means that blah balh balh">Your fees are higher than the majority of investors</p>',
+            text : '<p style="margin-top: 0" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="This means that blah balh balh">Your fees are higher than the majority of investors.</p>',
             style : {
-                color : "white",
+                color : "#333366",
             },
             useHTML : true
         },
@@ -44,7 +44,7 @@ var gaugeOptions = {
             labels: {
                 y: 16,
                 style : {
-                    color : "white"
+                    color : "#333366"
                 },
                 format : "{value}%"
             },
@@ -78,7 +78,7 @@ var gaugeOptions = {
             data: [2.2],
             dataLabels: {
                 format: '<div style="text-align:center; margin-bottom: 15px;"><span style="font-size:25px;color:' +
-                    ('white') + '">{y}%</span><br/>' +'</div>',
+                    ('#333366') + '">{y}%</span><br/>' +'</div>',
                 y: 0
             },
         }]
