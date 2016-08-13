@@ -2,7 +2,8 @@
 
 <html>
 <head>
-	<title>Home</title>
+	<title>Vestivise – Simple Investment Reporting</title>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'media/favicon.jpg' %}"/>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700,800,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="{% static 'build/css/dashboard.css' %}">
 
@@ -21,7 +22,7 @@
 
 	<nav>
 	    <div class="nav-wrapper vestBar">
-      		<a href="#" class="brand-logo center"><img height="100%" width="230" src="{% static 'media/images/logo.jpg' %}" alt=""></a>
+      		<a href="#" class="brand-logo center"><img height="100%" width="230" src="{% static 'media/images/logo.svg' %}" alt=""></a>
 			<ul style="margin-right : 40px" id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="{% url 'subscribe' %}">Subscribe</a></li>
 			</ul>
@@ -30,7 +31,7 @@
 
   	<div class="moduleContainer">
   		<div class="row moduleRow">
-		<div class="col s12 m6 module orange">
+		<div class="col s12 m6 module orange" style="background: #BBDEFB !important;">
 			
 			<div id="orangeContent">
 
@@ -48,40 +49,28 @@
 
 				<div id="assetBreakMod"></div>
 				<p class="modTitle L">Assets</p>
-				<div class="fullScreen BR">
-	    			<div class="fullScreen innerBR"></div>
-				</div>
 			</div>
 			
 		</div>
-		<div class="col s12 m6 module green">
+		<div class="col s12 m6 module green" style="background: #BBDEFB !important;">
 			<div id="greenContent">
 				<div id="returnPerYearMod"></div>
 				<p class="modTitle R">Returns</p>
-				<div class="fullScreen BL">
-	    			<div class="fullScreen innerBL"></div>
-				</div>	
 			</div>
 		</div>
 	</div>
 
 	<div class="row moduleRow">
-		<div class="col s12 m6 module purple">
+		<div class="col s12 m6 module purple" style="background: #BBDEFB !important;">
 			<div id="purpleContent">
 				<div id="riskMod"></div>
 				<p class="modTitle L">Risks</p>
-				<div class="fullScreen TR">
-	    			<div class="fullScreen innerTR"></div>
-				</div>
 			</div>
 		</div>
-		<div class="col s12 m6 module blue">
+		<div class="col s12 m6 module blue" style="background: #BBDEFB !important;">
 			<div id="blueContent">
 				<div id="feeMod"></div>
 				<p class="modTitle R">Costs</p>
-				<div class="fullScreen TL">
-	    			<div class="fullScreen innerTL"></div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -107,7 +96,7 @@
 
 <script>
  	var hidden = false;
-	$('.innerBR').click(function(){
+	$('#orangeContent').click(function(){
 
 		if(!hidden){
 			$('#blueContent').hide();
@@ -115,7 +104,7 @@
 			$('#greenContent').hide();
 
 			$('.module.green').hide();
-			$("body").css("background-color","#FF9800");
+			$("body").css("background-color", "#BBDEFB");
 
 			$('.module.orange').animate({
 				width: "100%",

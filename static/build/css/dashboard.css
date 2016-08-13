@@ -79,19 +79,19 @@ span {
 }
 
 .module.orange{
-	background-color: #F19B2C;
+	background-color: #BBDEFB;
 }
 
 .module.green{
-	background-color: #61B67A;
+	background-color: #BBDEFB;
 }
 
 .module.purple{
-	background-color: #9A5CB4;
+	background-color: #BBDEFB;
 }
 
 .module.blue{
-	background-color: #3A99D8;
+	background-color: #BBDEFB;
 }
 
 #returnPerYearMod{
@@ -116,7 +116,7 @@ span {
 
 .modTitle{
 	position: absolute;
-	color: white;
+	color: #333366;
 	/*font-weight: bold;*/
 }
 

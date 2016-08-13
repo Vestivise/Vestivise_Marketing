@@ -7,12 +7,12 @@ function hideLabel(){
 }
 
 var chart = {
-    backgroundColor: "#FF9800"
+    backgroundColor: "#BBDEFB"
 };
 var title = {
    text: 'You have $280,000 invested.', 
    style : {
-      color : "white"
+      color : "#333366"
    }  
 };      
 var tooltip = {
@@ -58,7 +58,7 @@ var series= [{
       }
    ],
    dataLabels : {
-      color : 'white'
+      color : "#333366"
    }
 }]; 
 

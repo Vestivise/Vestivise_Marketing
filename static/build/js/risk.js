@@ -9,13 +9,13 @@ $('#riskMod').highcharts({
             plotBackgroundImage: null,
             plotBorderWidth: 0,
             plotShadow: false,
-            backgroundColor: "#9C27B0",
+            backgroundColor: "#BBDEFB"
         },
         title: {
             text: 'Your risk is characterized as moderate.',
             align: 'center',
             style: {
-                color : 'white'
+                color : '#333366'
             },
         },
         tooltip: {
@@ -62,7 +62,7 @@ $('#riskMod').highcharts({
                     style: {
                         fontWeight: 'bold',
                         color: 'white',
-                        textShadow: '0px 1px 2px black'
+                        textShadow: '0px 0px 1px black'
                     }
                 },
                 startAngle: -90,
