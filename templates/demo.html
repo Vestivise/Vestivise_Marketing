@@ -2,8 +2,9 @@
 
 <html>
 <head>
-	<title>Home</title>
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,700,800,900' rel='stylesheet' type='text/css'>
+	<title>Vestivise – Simple Investment Reporting</title>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'media/favicon.jpg' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="{% static 'build/css/dashboard.css' %}">
 
 	<!-- Compiled and minified CSS -->
@@ -21,7 +22,7 @@
 
 	<nav>
 	    <div class="nav-wrapper vestBar">
-      		<a href="#" class="brand-logo center"><img height="100%" width="230" src="{% static 'media/images/logo.jpg' %}" alt=""></a>
+      		<a href="#" class="brand-logo center"><img height="100%" src="{% static 'media/images/logo.svg' %}" alt=""></a>
 			<ul style="margin-right : 40px" id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="{% url 'subscribe' %}">Subscribe</a></li>
 			</ul>
@@ -30,62 +31,45 @@
 
   	<div class="moduleContainer">
   		<div class="row moduleRow">
-		<div class="col s12 m6 module orange">
+		<div class="col s12 m6 module orange" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
 			
 			<div id="orangeContent">
-
 				<div id="toggleChart" class="fixed-action-btn">
 				    <a style="display: none;" id="toggleChartBtn" class="btn-floating blue waves-effect">
 				      <i class="large material-icons">insert_chart</i>
 				    </a>
 				</div>
-
-				<div class="fixed-action-btn" style="position: absolute; display: inline-block; right: 24px; top: 0px">
-				    <a id="toggleMod" class="btn-floating red waves-effect">
-				      <i class="large material-icons">replay</i>
-				    </a>
-				</div>
-
 				<div id="assetBreakMod"></div>
-				<p class="modTitle L">Assets</p>
-				<div class="fullScreen BR">
-	    			<div class="fullScreen innerBR"></div>
-				</div>
+				<p class="modTitle R">Assets</p>
 			</div>
 			
 		</div>
-		<div class="col s12 m6 module green">
+		<div class="col s12 m6 module green" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
 			<div id="greenContent">
 				<div id="returnPerYearMod"></div>
-				<p class="modTitle R">Returns</p>
-				<div class="fullScreen BL">
-	    			<div class="fullScreen innerBL"></div>
-				</div>	
+				<p class="modTitle L">Returns</p>
 			</div>
 		</div>
 	</div>
 
 	<div class="row moduleRow">
-		<div class="col s12 m6 module purple">
+		<div class="col s12 m6 module purple" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
 			<div id="purpleContent">
+            <p id="t1" class="modTitle R" style="z-index:999999;">Risks</p>
 				<div id="riskMod"></div>
-				<p class="modTitle L">Risks</p>
-				<div class="fullScreen TR">
-	    			<div class="fullScreen innerTR"></div>
-				</div>
 			</div>
 		</div>
-		<div class="col s12 m6 module blue">
+		<div class="col s12 m6 module blue" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
 			<div id="blueContent">
+            <p id="t2" class="modTitle L" style="z-index:999999;">Costs</p>
 				<div id="feeMod"></div>
-				<p class="modTitle R">Costs</p>
-				<div class="fullScreen TL">
-	    			<div class="fullScreen innerTL"></div>
-				</div>
 			</div>
 		</div>
 	</div>
   	</div>
+    <div style="position:fixed; bottom:0; height: 4em; background:#f34258; z-index:999999;">
+    
+    </div>
 
 </body>
 
@@ -93,7 +77,7 @@
 	Highcharts.setOptions({
 		chart: {
         style: {
-            fontFamily: 'Raleway, sans-serif'
+            fontFamily: 'Lato, sans-serif'
         }
     }
 	});
@@ -106,16 +90,15 @@
 <script src="{% static 'build/js/sectionPie.js' %}"></script>
 
 <script>
- 	var hidden = false;
-	$('.innerBR').click(function(){
-
-		if(!hidden){
+ 	var asset = false;
+	$('#orangeContent').click(function(){
+		if(!asset){
 			$('#blueContent').hide();
 			$('#purpleContent').hide();
 			$('#greenContent').hide();
 
 			$('.module.green').hide();
-			$("body").css("background-color","#FF9800");
+			$("body").css("background-color", "#BBDEFB");
 
 			$('.module.orange').animate({
 				width: "100%",
@@ -128,11 +111,13 @@
 				done: function(){
 					$('.module.purple').hide();
 					$('.module.blue').hide();
-					hidden = true;
+					document.getElementById("orangeContent").style.height = "calc(100% - 4em)";
+					asset = true;
 				}
 			});
 		}
 		else{
+			document.getElementById("orangeContent").style.height = "100%";
 			$('.module.purple').show();
 			$('.module.blue').show();
 
@@ -149,12 +134,13 @@
 					$('#blueContent').show();
 					$('#purpleContent').show();
 					$('#greenContent').show();
-					hidden = false;
+					
+					asset = false;
 				}
 			});
 		}
-		
 	});	
+	
 
 	var toggleVar = 0;
 

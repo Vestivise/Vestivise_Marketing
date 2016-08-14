@@ -20,6 +20,26 @@ body {
   background-color: #fff;
 }
 
+.modal{
+	display: none;
+	position: fixed;
+	z-index:9999; 
+    left: 0;
+    top: 0;
+	width: 100%; /* Full width */
+    height: 100%; /* Full height */
+	overflow: scroll;
+	background-color: rgba(250,250,250,0.95);
+}
+
+.modal-content{
+	background-color: white;
+	margin: 15% auto;
+	padding-left: 3em;
+	padding-right:3em;
+}
+
+
 .flink{
 	color: white;
 }
