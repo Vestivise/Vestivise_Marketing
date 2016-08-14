@@ -3,13 +3,15 @@ var gaugeOptions = {
         chart: {
             type: 'solidgauge',
             backgroundColor: "#BBDEFB",
+			spacingBottom: 40
         },
 
         title: {
-            text : '<p style="margin-top: 0" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="This means that blah balh balh">Your fees are higher than the majority of investors.</p>',
+            text : '<p style="margin-top: 0; margin-bottom:1em;" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="This means that blah balh balh">Your fees are higher than the majority of investors.</p>',
             style : {
                 color : "#333366",
             },
+			verticalAlign: 'bottom',
             useHTML : true
         },
 
