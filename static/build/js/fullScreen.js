@@ -5,6 +5,9 @@ var costGraph = false;
 
 $('#orangeContent').click(function(){
 	if(!asset){
+		$('.bottommenu-center').html("Assets");
+		$('.moduleContainer').css('height', 'calc(92vh - 64px)');
+		$('.modTitle').css('display', 'none');
 		$('#blueContent').hide();
 		$('#purpleContent').hide();
 		$('#greenContent').hide();
@@ -23,12 +26,13 @@ $('#orangeContent').click(function(){
 			done: function(){
 				$('.module.purple').hide();
 				$('.module.blue').hide();
-				document.getElementById("orangeContent").style.height = "calc(100% - 4em)";
+				document.getElementById("orangeContent").style.height = "100%";
 				asset = true;
 			}
 		});
 	}
 	else{
+		$('.moduleContainer').css('height', 'calc(100% - 64px)');
 		document.getElementById("orangeContent").style.height = "100%";
 		$('.module.purple').show();
 		$('.module.blue').show();
@@ -46,7 +50,7 @@ $('#orangeContent').click(function(){
 				$('#blueContent').show();
 				$('#purpleContent').show();
 				$('#greenContent').show();
-				
+				$('.modTitle').css('display', 'block');
 				asset = false;
 			}
 		});
@@ -55,6 +59,9 @@ $('#orangeContent').click(function(){
 
 $('#greenContent').click(function(){
 	if(!returnGraph){
+		$('.bottommenu-center').html("Returns");
+		$('.moduleContainer').css('height', 'calc(92vh - 64px)');
+		$('.modTitle').css('display', 'none');
 		$('#blueContent').hide();
 		$('#purpleContent').hide();
 		$('#orangeContent').hide();
@@ -79,7 +86,7 @@ $('#greenContent').click(function(){
 				$('.module.purple').hide();
 				$('.module.blue').hide();
 				$('.module.orange').hide();
-				document.getElementById("greenContent").style.height = "calc(100% - 4em)";
+				document.getElementById("greenContent").style.height = "100%";
 				returnGraph = true;
 			}
 		});
@@ -91,6 +98,7 @@ $('#greenContent').click(function(){
 		})
 	}
 	else{
+		$('.moduleContainer').css('height', 'calc(100% - 64px)');
 		document.getElementById("greenContent").style.height = "100%";
 		$('.module.purple').show();
 		$('.module.blue').show();
@@ -118,7 +126,7 @@ $('#greenContent').click(function(){
 				$('.module.green').css({
 					"marginLeft": "0",
 				});
-				
+				$('.modTitle').css('display', 'block');
 				returnGraph = false;
 			}
 		});
@@ -127,6 +135,9 @@ $('#greenContent').click(function(){
 
 $('#purpleContent').click(function(){
 	if(!riskGraph){
+		$('.bottommenu-center').html("Risks");
+		$('.moduleContainer').css('height', 'calc(92vh - 64px)');
+		$('.modTitle').css('display', 'none');
 		$('#blueContent').hide();
 		$('#greenContent').hide();
 		$('#orangeContent').hide();
@@ -145,7 +156,7 @@ $('#purpleContent').click(function(){
 				$('.module.green').hide();
 				$('.module.blue').hide();
 				$('.module.orange').hide();
-				document.getElementById("purpleContent").style.height = "calc(100% - 4em)";
+				document.getElementById("purpleContent").style.height = "100%";
 				riskGraph = true;
 			}
 		});
@@ -166,6 +177,7 @@ $('#purpleContent').click(function(){
 		
 	}
 	else{
+		$('.moduleContainer').css('height', 'calc(100% - 64px)');
 		document.getElementById("purpleContent").style.height = "100%";
 		$('.module.green').show();
 		$('.module.blue').show();
@@ -193,7 +205,7 @@ $('#purpleContent').click(function(){
 					"width": "50%",
 					"height": "50%"
 				});
-				
+				$('.modTitle').css('display', 'block');
 				returnGraph = false;
 			}
 		});
@@ -216,6 +228,9 @@ $('#purpleContent').click(function(){
 
 $('#blueContent').click(function(){
 	if(!costGraph){
+		$('.bottommenu-center').html("Costs");
+		$('.moduleContainer').css('height', 'calc(92vh - 64px)');
+		$('.modTitle').css('display', 'none');
 		$('#greenContent').hide();
 		$('#purpleContent').hide();
 		$('#orangeContent').hide();
@@ -234,7 +249,7 @@ $('#blueContent').click(function(){
 				$('.module.purple').hide();
 				$('.module.green').hide();
 				$('.module.orange').hide();
-				document.getElementById("blueContent").style.height = "calc(100% - 4em)";
+				document.getElementById("blueContent").style.height = "100%";
 				costGraph = true;
 			}
 		});
@@ -260,6 +275,7 @@ $('#blueContent').click(function(){
 		})
 	}
 	else{
+		$('.moduleContainer').css('height', 'calc(100% - 64px)');
 		document.getElementById("blueContent").style.height = "100%";
 		$('.module.purple').show();
 		$('.module.green').show();
@@ -287,7 +303,7 @@ $('#blueContent').click(function(){
 				$('.module.blue').css({
 					"marginLeft": 0,
 				});
-				
+				$('.modTitle').css('display', 'block');
 				costGraph = false;
 			}
 		});
