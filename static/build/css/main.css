@@ -34,11 +34,13 @@ body {
 
 .modal-content{
 	background-color: white;
-	margin: 15% auto;
 	padding-left: 3em;
 	padding-right:3em;
 }
 
+#securityModal-content{
+	margin: 15% auto;
+}
 
 .flink{
 	color: white;

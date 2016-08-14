@@ -9,14 +9,16 @@ $('#riskMod').highcharts({
             plotBackgroundImage: null,
             plotBorderWidth: 0,
             plotShadow: false,
-            backgroundColor: "#BBDEFB"
+            backgroundColor: "#BBDEFB",
+			spacingBottom: 40
         },
         title: {
             text: 'Your risk is characterized as moderate.',
             align: 'center',
             style: {
-                color : '#333366'
+                color : '#333366',
             },
+			verticalAlign: 'bottom',
         },
         tooltip: {
             enabled : false            

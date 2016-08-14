@@ -72,6 +72,7 @@ span {
 .module{
 	height: 50%;
 	position: relative;
+    cursor: pointer !important;
 }
 
 .row.moduleRow{
@@ -117,7 +118,7 @@ span {
 .modTitle{
 	position: absolute;
 	color: #333366;
-	/*font-weight: bold;*/
+	font-weight: bold;
 }
 
 .modTitle.L{
@@ -128,6 +129,11 @@ span {
 .modTitle.R{
 	right: 20;
 	bottom: 0;
+}
+
+
+#t1,#t2{
+	top:0;
 }
 
 .fullScreen{
@@ -232,6 +238,31 @@ span {
 	top: 0px !important;
 	width: 0px !important;
 }
+
+.bottommenu{
+	width:100vw;
+	text-align: center;
+	font-size:larger;
+}
+.bottommenu-left,.bottommenu-center,.bottommenu-right{
+	display:inline-block;
+	float: none;
+	color:white;
+}
+	
+.bottommenu-left{
+}
+
+.bottommenu-center{
+	padding-left: 20vw;
+	padding-right: 20vw;
+	font-weight:bold;
+	font-size: larger;
+}
+
+.bottommenu-right{
+}
+	
 
 @media only screen and (max-width: 767px) {
     /* phones */

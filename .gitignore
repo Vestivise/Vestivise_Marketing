@@ -3,8 +3,6 @@ env
 Vestivise_Marketing/*.pyc
 
 templates/index (original).html
-
-<<<<<<< HEAD
 templates/landingPage(josh's verision).html
 
 *.pyc
@@ -15,5 +13,6 @@ templates/landingPage(josh's verision).html
 
 *.pyc
 
-templates/landingPage(josh's verision).html
->>>>>>> master
+db.sqlite3
+
+Vestivise_Marketing/keys.py
