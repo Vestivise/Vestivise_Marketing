@@ -1,63 +1,67 @@
-var title = {
-    	text: 'You lost $5,000 this year so far.',
-    	style: {
-    		color : "#333366"
-    	}
-   	};
+var config = {};
+
+config.title = {
+  text: '',
+  style: {
+    color : "#434778"
+  }
+};
   
-var xAxis = {
-  	categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    	'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-   	labels: {
-		style: {
-			color : "#333366"
-		}	
-	}
+config.xAxis = {
+    categories: [
+        "One Month Return",
+        "Three Month Return",
+        "One Year Return",
+        "Three Year Return"
+    ],
+    labels: {
+    style: {
+      color : '#434778'
+    } 
+  }
 };
 
-var yAxis = {
-	title: {
-		text: 'Return Amount',
-		style: {
-			color : "#333366"
-		}
-	},
-	gridLineColor: 'transparent',
-	labels: {
-		style: {
-			color : "#333366"
-		}	
-	}
+config.yAxis = {
+  title: {
+    text: 'Return Amount',
+    style: {
+      color : "#434778"
+    }
+  },
+  gridLineColor: 'transparent',
+  labels: {
+    style: {
+      color : '#434778'
+    } 
+  }
 };
 
-var plotOptions = {
-  	line: {
-    	dataLabels: {
-        	enabled: true
-    	},   
-     	enableMouseTracking: true
-  	},
+config.plotOptions = {
+    line: {
+      dataLabels: {
+          enabled: true
+      },   
+      enableMouseTracking: true
+    },
 };
 
-var chart = {
-  	backgroundColor: "#BBDEFB"
+config.chart = {
+    backgroundColor: null,
+    type: 'column'
 };
 
-var dataSource1 = [11.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 21.5, 25.2, 26.5];
-var dataSource2 = [3, 12, 5, 26, 17, 3, 12, 5, 26, 17, 3, 12];
-
-var series= [{
-        name: '<p style="color : #333366">My Returns</p>',
-        data: dataSource2,
-        color: "#F24258",
+config.series= [{
+        name: '<p style="color : #434778">My Returns</p>',
+        data: [1, 1, 1, 1],
+        color: "white",
         dataLabels:{
             enabled : false,
         }
     },
     {
-        name: '<p style="color : #333366">Benchmark - S&P 500</p>',
-        data: dataSource1,
-        color: "#333366",
+        name: '<p style="color : #434778">Benchmark - S&P 500</p>',
+        data: [1,1,1,1],
+        color: "#F24258",
         dataLabels:{
             enabled : false,
         },
@@ -65,17 +69,9 @@ var series= [{
     }
 ];
 
-var credits = {
-      enabled: false
-}
+config.credits = {
+    enabled: false
+};
    
-var json = {};
 
-json.title = title;
-json.chart = chart;
-json.xAxis = xAxis;
-json.yAxis = yAxis;  
-json.series = series;
-json.credits = credits;
-json.plotOptions = plotOptions;
-$('#returnPerYearMod').highcharts(json);
+$('#returnPerYearMod').highcharts(config);

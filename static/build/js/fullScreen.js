@@ -1,0 +1,347 @@
+var asset = false;
+var returnGraph =  false;
+var riskGraph = false;
+var costGraph = false;
+
+$('#orangeContent').click(function(){
+	if(!asset){
+		$('#blueContent').hide();
+		$('#purpleContent').hide();
+		$('#greenContent').hide();
+
+		$('.module.green').hide();
+		$("body").css("background-color", "#BBDEFB");
+
+		$('.module.orange').animate({
+			width: "100%",
+			height: "100%",
+		}, {
+			duration: 1000,
+			step: function(){
+				$("#assetBreakMod").highcharts().reflow();
+			},
+			done: function(){
+				$('.module.purple').hide();
+				$('.module.blue').hide();
+				document.getElementById("orangeContent").style.height = "calc(100% - 4em)";
+				asset = true;
+			}
+		});
+	}
+	else{
+		document.getElementById("orangeContent").style.height = "100%";
+		$('.module.purple').show();
+		$('.module.blue').show();
+
+		$('.module.orange').animate({
+			width: "50%",
+			height: "50%",
+		}, {
+			duration: 1000,
+			step: function(){
+				$("#assetBreakMod").highcharts().reflow();
+			},
+			done:function(){
+				$('.module.green').show();
+				$('#blueContent').show();
+				$('#purpleContent').show();
+				$('#greenContent').show();
+				
+				asset = false;
+			}
+		});
+	}
+});	
+
+$('#greenContent').click(function(){
+	if(!returnGraph){
+		$('#blueContent').hide();
+		$('#purpleContent').hide();
+		$('#orangeContent').hide();
+		$('.module.orange').hide();
+
+		$('.module.green').css({
+			"marginLeft": "50%",
+		});
+
+		$("body").css("background-color", "#BBDEFB");
+
+		$('.module.green').animate({
+			width: "100%",
+			height: "100%",
+			marginLeft : 0
+		}, {
+			duration: 1000,
+			step: function(){
+				$("#returnPerYearMod").highcharts().reflow();
+			},
+			done: function(){
+				$('.module.purple').hide();
+				$('.module.blue').hide();
+				$('.module.orange').hide();
+				document.getElementById("greenContent").style.height = "calc(100% - 4em)";
+				returnGraph = true;
+			}
+		});
+		$('.module.orange').animate({
+			width: 0,
+			height: 0
+		}, {
+			duration: 900
+		})
+	}
+	else{
+		document.getElementById("greenContent").style.height = "100%";
+		$('.module.purple').show();
+		$('.module.blue').show();
+		$('.module.orange').show();
+
+		$('.module.green').animate({
+			width: "50%",
+			height: "50%",
+			marginLeft: "50%"
+		}, {
+			duration: 1000,
+			step: function(){
+				$("#returnPerYearMod").highcharts().reflow();
+			},
+			done:function(){
+				$('#blueContent').show();
+				$('#purpleContent').show();
+					$('#orangeContent').show();
+
+				$('.module.orange').css({
+					"width": "50%",
+					"height": "50%"
+				});
+
+				$('.module.green').css({
+					"marginLeft": "0",
+				});
+				
+				returnGraph = false;
+			}
+		});
+	}
+});	
+
+$('#purpleContent').click(function(){
+	if(!riskGraph){
+		$('#blueContent').hide();
+		$('#greenContent').hide();
+		$('#orangeContent').hide();
+
+		$("body").css("background-color", "#BBDEFB");
+
+		$('.module.purple').animate({
+			width: "100%",
+			height: "100%",
+		}, {
+			duration: 1000,
+			step: function(){
+				$("#riskMod").highcharts().reflow();
+			},
+			done: function(){
+				$('.module.green').hide();
+				$('.module.blue').hide();
+				$('.module.orange').hide();
+				document.getElementById("purpleContent").style.height = "calc(100% - 4em)";
+				riskGraph = true;
+			}
+		});
+
+		$('.module.green').animate({
+			width: 0,
+			height: 0
+		}, {
+			duration: 900
+		})
+
+		$('.module.orange').animate({
+			width: 0,
+			height: 0
+		}, {
+			duration: 900
+		})
+		
+	}
+	else{
+		document.getElementById("purpleContent").style.height = "100%";
+		$('.module.green').show();
+		$('.module.blue').show();
+		$('.module.orange').show();
+
+		$('.module.purple').animate({
+			width: "50%",
+			height: "50%",
+		}, {
+			duration: 1000,
+			step: function(){
+				$("#riskMod").highcharts().reflow();
+			},
+			done:function(){
+				$('#blueContent').show();
+				$('#greenContent').show();
+				$('#orangeContent').show();
+
+				$('.module.orange').css({
+					"width": "50%",
+					"height": "50%"
+				});
+
+				$('.module.green').css({
+					"width": "50%",
+					"height": "50%"
+				});
+				
+				returnGraph = false;
+			}
+		});
+
+		$('.module.green').animate({
+			width: "50%",
+			height: "50%"
+		}, {
+			duration: 900
+		})
+
+		$('.module.orange').animate({
+			width: "50%",
+			height: "50%"
+		}, {
+			duration: 900
+		})
+	}
+});
+
+$('#blueContent').click(function(){
+	if(!costGraph){
+		$('#greenContent').hide();
+		$('#purpleContent').hide();
+		$('#orangeContent').hide();
+
+		$("body").css("background-color", "#BBDEFB");
+
+		$('.module.blue').animate({
+			width: "100%",
+			height: "100%",
+		}, {
+			duration: 1000,
+			step: function(){
+				$("#feeMod").highcharts().reflow();
+			},
+			done: function(){
+				$('.module.purple').hide();
+				$('.module.green').hide();
+				$('.module.orange').hide();
+				document.getElementById("blueContent").style.height = "calc(100% - 4em)";
+				costGraph = true;
+			}
+		});
+		$('.module.green').animate({
+			width: 0,
+			height: 0
+		}, {
+			duration: 900
+		})
+
+		$('.module.orange').animate({
+			width: 0,
+			height: 0
+		}, {
+			duration: 900
+		})
+
+		$('.module.purple').animate({
+			width: 0,
+			height: 0
+		}, {
+			duration: 900
+		})
+	}
+	else{
+		document.getElementById("blueContent").style.height = "100%";
+		$('.module.purple').show();
+		$('.module.green').show();
+		$('.module.orange').show();
+
+		$('.module.blue').animate({
+			width: "50%",
+			height: "50%",
+			marginLeft : "50%"
+		}, {
+			duration: 1000,
+			step: function(){
+				$("#feeMod").highcharts().reflow();
+			},
+			done:function(){
+				$('#greenContent').show();
+				$('#purpleContent').show();
+				$('#orangeContent').show();
+
+				$('.module.purple').css({
+					"width": "50%",
+					"height": "50%"
+				});
+
+				$('.module.blue').css({
+					"marginLeft": 0,
+				});
+				
+				costGraph = false;
+			}
+		});
+
+		$('.module.green').animate({
+			width: "50%",
+			height: "50%"
+		}, {
+			duration: 900
+		})
+
+		$('.module.orange').animate({
+			width: "50%",
+			height: "50%"
+		}, {
+			duration: 900
+		})
+
+	}
+});
+
+
+// var toggleVar = 0;
+
+// $('#toggleMod').click(function() {
+
+// 	if(toggleVar == 0){
+// 		$('#toggleChartBtn').show();
+// 		$('#assetBreakMod').highcharts().destroy();
+// 		$('#assetBreakMod').highcharts(sectorOpt);
+// 	}else{
+// 		$('#assetBreakMod').highcharts(assetOpt);
+// 		$('#toggleChartBtn').hide();
+// 	}
+
+// 	toggleVar = toggleVar == 0 ? 1 : 0;
+	
+// });
+
+// var dataToggle = 0;
+
+// $('#toggleChartBtn').click(function(){
+// 	var chart = $('#assetBreakMod').highcharts();
+// 	if(dataToggle == 0){
+// 		chart.setTitle({text: "Bond Sectors"});
+// 		chart.series[0].remove();
+// 		dataSeries[0].data = data2;
+// 		chart.addSeries(dataSeries[0]);
+// 	}else{
+// 		chart.setTitle({text: "Equity Sectors"});
+// 		chart.series[0].remove();
+// 		dataSeries[0].data = data1;
+// 		chart.addSeries(dataSeries[0]);
+// 	}
+// 	chart.redraw();
+// 	dataToggle = dataToggle == 0 ? 1 : 0;
+// });

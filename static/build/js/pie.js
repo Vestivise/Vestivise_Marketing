@@ -34,6 +34,7 @@ var plotOptions = {
 var series= [{
    type: 'pie',
    name: 'Share',
+   allowPointSelect: false,
    data: [
       {
          name : "Bonds",
