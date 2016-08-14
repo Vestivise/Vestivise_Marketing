@@ -22,7 +22,7 @@
 
 	<nav>
 	    <div class="nav-wrapper vestBar">
-      		<a href="#" class="brand-logo center"><img height="100%" width="230" src="{% static 'media/images/logo.svg' %}" alt=""></a>
+      		<a href="#" class="brand-logo center"><img height="100%" src="{% static 'media/images/logo.svg' %}" alt=""></a>
 			<ul style="margin-right : 40px" id="nav-mobile" class="right hide-on-med-and-down">
 				<li><a href="{% url 'subscribe' %}">Subscribe</a></li>
 			</ul>
@@ -34,17 +34,13 @@
 		<div class="col s12 m6 module orange" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
 			
 			<div id="orangeContent">
-
 				<div id="toggleChart" class="fixed-action-btn">
 				    <a style="display: none;" id="toggleChartBtn" class="btn-floating blue waves-effect">
 				      <i class="large material-icons">insert_chart</i>
 				    </a>
-                    <br>
 				</div>
-				
 				<div id="assetBreakMod"></div>
 				<p class="modTitle R">Assets</p>
-                <br>
 			</div>
 			
 		</div>
@@ -52,7 +48,6 @@
 			<div id="greenContent">
 				<div id="returnPerYearMod"></div>
 				<p class="modTitle L">Returns</p>
-                <br>
 			</div>
 		</div>
 	</div>
@@ -72,6 +67,9 @@
 		</div>
 	</div>
   	</div>
+    <div style="position:fixed; bottom:0; height: 4em; background:#f34258; z-index:999999;">
+    
+    </div>
 
 </body>
 
@@ -92,10 +90,9 @@
 <script src="{% static 'build/js/sectionPie.js' %}"></script>
 
 <script>
- 	var hidden = false;
+ 	var asset = false;
 	$('#orangeContent').click(function(){
-
-		if(!hidden){
+		if(!asset){
 			$('#blueContent').hide();
 			$('#purpleContent').hide();
 			$('#greenContent').hide();
@@ -114,11 +111,13 @@
 				done: function(){
 					$('.module.purple').hide();
 					$('.module.blue').hide();
-					hidden = true;
+					document.getElementById("orangeContent").style.height = "calc(100% - 4em)";
+					asset = true;
 				}
 			});
 		}
 		else{
+			document.getElementById("orangeContent").style.height = "100%";
 			$('.module.purple').show();
 			$('.module.blue').show();
 
@@ -135,12 +134,13 @@
 					$('#blueContent').show();
 					$('#purpleContent').show();
 					$('#greenContent').show();
-					hidden = false;
+					
+					asset = false;
 				}
 			});
 		}
-		
 	});	
+	
 
 	var toggleVar = 0;
 
