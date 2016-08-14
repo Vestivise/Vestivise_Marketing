@@ -242,6 +242,7 @@ span {
 .bottommenu{
 	width:100vw;
 	text-align: center;
+	font-size:larger;
 }
 .bottommenu-left,.bottommenu-center,.bottommenu-right{
 	display:inline-block;
@@ -256,7 +257,7 @@ span {
 	padding-left: 20vw;
 	padding-right: 20vw;
 	font-weight:bold;
-	font-size:larger;
+	font-size: larger;
 }
 
 .bottommenu-right{

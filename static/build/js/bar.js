@@ -53,15 +53,15 @@ config.chart = {
 config.series= [{
         name: '<p style="color : #434778">My Returns</p>',
         data: [1, 1, 1, 1],
-        color: "white",
+        color: "#F24258",
         dataLabels:{
             enabled : false,
         }
     },
     {
         name: '<p style="color : #434778">Benchmark - S&P 500</p>',
-        data: [1,1,1,1],
-        color: "#F24258",
+        data: [0.48,4.06,4.70,8.94],
+        color: "rgb(66,153,210)",
         dataLabels:{
             enabled : false,
         },

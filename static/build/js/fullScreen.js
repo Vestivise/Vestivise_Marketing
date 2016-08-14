@@ -7,6 +7,7 @@ $('#orangeContent').click(function(){
 	if(!asset){
 		$('.bottommenu-center').html("Assets");
 		$('.moduleContainer').css('height', 'calc(92vh - 64px)');
+		$("#bmenu-wrapper").css('display','block');
 		$('.modTitle').css('display', 'none');
 		$('#blueContent').hide();
 		$('#purpleContent').hide();
@@ -61,6 +62,7 @@ $('#greenContent').click(function(){
 	if(!returnGraph){
 		$('.bottommenu-center').html("Returns");
 		$('.moduleContainer').css('height', 'calc(92vh - 64px)');
+		$("#bmenu-wrapper").css('display','block');
 		$('.modTitle').css('display', 'none');
 		$('#blueContent').hide();
 		$('#purpleContent').hide();
@@ -137,6 +139,7 @@ $('#purpleContent').click(function(){
 	if(!riskGraph){
 		$('.bottommenu-center').html("Risks");
 		$('.moduleContainer').css('height', 'calc(92vh - 64px)');
+		$("#bmenu-wrapper").css('display','block');
 		$('.modTitle').css('display', 'none');
 		$('#blueContent').hide();
 		$('#greenContent').hide();
@@ -230,6 +233,7 @@ $('#blueContent').click(function(){
 	if(!costGraph){
 		$('.bottommenu-center').html("Costs");
 		$('.moduleContainer').css('height', 'calc(92vh - 64px)');
+		$("#bmenu-wrapper").css('display','block');
 		$('.modTitle').css('display', 'none');
 		$('#greenContent').hide();
 		$('#purpleContent').hide();
