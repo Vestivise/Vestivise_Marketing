@@ -2,6 +2,8 @@ body{
 	font-family: 'Lato', sans-serif !important;
 	font-weight:200;
 	background-color: #f34258;
+    overflow-x: hidden;
+
 }
 
 .welcome{
@@ -18,6 +20,17 @@ body{
     text-align: center;
 	color: #fff;
 	font-size: 2.5vw;
+}
+
+#footer{
+    margin-bottom: 0px !important;
+}
+
+#bmenu-wrapper{
+    height: 13vh; 
+    width:100%; 
+    background-color: #f34258 !important; 
+    display: none;
 }
 
 #report{
