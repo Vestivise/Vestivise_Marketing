@@ -18,7 +18,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 
 </head>
-<body style="overflow:hidden;">
+<body>
 
 	<nav>
 	    <div class="nav-wrapper vestBar">
@@ -31,7 +31,7 @@
 
   	<div class="moduleContainer">
   		<div class="row moduleRow">
-		<div class="col s12 m6 module orange" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
+		<div class="col s12 m12 l6 module orange" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
 			
 			<div id="orangeContent">
 				<div id="toggleChart" class="fixed-action-btn">
@@ -44,7 +44,7 @@
 			</div>
 			
 		</div>
-		<div class="col s12 m6 module green" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
+		<div class="col s12 m12 l6 module green" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
 			<div id="greenContent">
 				<div id="returnPerYearMod"></div>
 				<p class="modTitle L">Returns</p>
@@ -53,13 +53,13 @@
 	</div>
 
 	<div class="row moduleRow">
-		<div class="col s12 m6 module purple" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
+		<div class="col s12 m12 l6 module purple" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
 			<div id="purpleContent">
             <p id="t1" class="modTitle R" style="z-index:999999;">Risks</p>
 				<div id="riskMod"></div>
 			</div>
 		</div>
-		<div class="col s12 m6 module blue" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
+		<div class="col s12 m12 l6 module blue" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
 			<div id="blueContent">
             <p id="t2" class="modTitle L" style="z-index:999999;">Costs</p>
 				<div id="feeMod"></div>
@@ -67,25 +67,24 @@
 		</div>
 	</div>
   	</div>
-   <div class="row moduleRow">
-   <div id="bmenu-wrapper" class="col l12 module pink" style="height: 8vh; width:100%; background-color: #f34258 !important; display: none;">
-   <ul class="bottommenu">
-   <li class="bottommenu-left">Insights</li>
-   <li class="bottommenu-center">Assets</li>
-   <li class="bottommenu-right">Comparisons</li>
-   </ul>
-   </div>
+   <div id="footer" class="row">
+   	<div id="bmenu-wrapper" class="col l12 module pink">
+	   <ul class="bottommenu">
+	   <li class="bottommenu-left">Insights</li>
+	   <li class="bottommenu-center">Assets</li>
+	   <li class="bottommenu-right">Comparisons</li>
+	   </ul>
+	   </div>
    </div>
 </body>
 
 <script>
 	Highcharts.setOptions({
 		chart: {
-        style: {
-            fontFamily: 'Lato, sans-serif'
-        }
-		
-    }
+	        style: {
+	            fontFamily: 'Lato, sans-serif'
+	        }
+    	}
 	});
 </script>
 
@@ -93,7 +92,6 @@
 <script src="{% static 'build/js/bar.js' %}"></script>
 <script src="{% static 'build/js/pie.js' %}"></script>
 <script src="{% static 'build/js/risk.js' %}"></script>
-<script src="{% static 'build/js/sectionPie.js' %}"></script>
 
 <script src="{% static 'build/js/fullScreen.js' %}"></script>
 

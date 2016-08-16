@@ -37,6 +37,7 @@ $('#orangeContent').click(function(){
 		document.getElementById("orangeContent").style.height = "100%";
 		$('.module.purple').show();
 		$('.module.blue').show();
+		$("#bmenu-wrapper").css('display','none');
 
 		$('.module.orange').animate({
 			width: "50%",
@@ -105,6 +106,7 @@ $('#greenContent').click(function(){
 		$('.module.purple').show();
 		$('.module.blue').show();
 		$('.module.orange').show();
+		$("#bmenu-wrapper").css('display','none');
 
 		$('.module.green').animate({
 			width: "50%",
@@ -185,6 +187,7 @@ $('#purpleContent').click(function(){
 		$('.module.green').show();
 		$('.module.blue').show();
 		$('.module.orange').show();
+		$("#bmenu-wrapper").css('display','none');
 
 		$('.module.purple').animate({
 			width: "50%",
@@ -284,6 +287,7 @@ $('#blueContent').click(function(){
 		$('.module.purple').show();
 		$('.module.green').show();
 		$('.module.orange').show();
+		$("#bmenu-wrapper").css('display','none');
 
 		$('.module.blue').animate({
 			width: "50%",
@@ -329,39 +333,3 @@ $('#blueContent').click(function(){
 	}
 });
 
-
-// var toggleVar = 0;
-
-// $('#toggleMod').click(function() {
-
-// 	if(toggleVar == 0){
-// 		$('#toggleChartBtn').show();
-// 		$('#assetBreakMod').highcharts().destroy();
-// 		$('#assetBreakMod').highcharts(sectorOpt);
-// 	}else{
-// 		$('#assetBreakMod').highcharts(assetOpt);
-// 		$('#toggleChartBtn').hide();
-// 	}
-
-// 	toggleVar = toggleVar == 0 ? 1 : 0;
-	
-// });
-
-// var dataToggle = 0;
-
-// $('#toggleChartBtn').click(function(){
-// 	var chart = $('#assetBreakMod').highcharts();
-// 	if(dataToggle == 0){
-// 		chart.setTitle({text: "Bond Sectors"});
-// 		chart.series[0].remove();
-// 		dataSeries[0].data = data2;
-// 		chart.addSeries(dataSeries[0]);
-// 	}else{
-// 		chart.setTitle({text: "Equity Sectors"});
-// 		chart.series[0].remove();
-// 		dataSeries[0].data = data1;
-// 		chart.addSeries(dataSeries[0]);
-// 	}
-// 	chart.redraw();
-// 	dataToggle = dataToggle == 0 ? 1 : 0;
-// });
