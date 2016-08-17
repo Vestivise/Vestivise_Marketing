@@ -16,3 +16,4 @@ templates/landingPage(josh's verision).html
 db.sqlite3
 
 Vestivise_Marketing/keys.py
+static/src/node_modules
