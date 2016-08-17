@@ -13,12 +13,13 @@ $('#riskMod').highcharts({
 			spacingBottom: 40
         },
         title: {
-            text: 'Your risk is characterized as moderate.',
+            text: '<p class="tooltipped" data-position="top" data-delay="50" data-tooltip="If you have a portfolio that is making good returns, but is fairly risky, it\'ll end up in the middle end of the gauge">Your risk is characterized as moderate.</p>',
             align: 'center',
             style: {
                 color : '#333366',
             },
 			verticalAlign: 'bottom',
+            useHTML : true
         },
         tooltip: {
             enabled : false            
@@ -87,9 +88,9 @@ $('#riskMod').highcharts({
             name: 'Risk',
             data: [
                 {
-                    name: 'Safe',
+                    name: 'Bad',
                     y : 33,
-                    color: "#2cc36b"
+                    color: "#c0392b"
                 },
                 {
                     name: 'Moderate',
@@ -97,9 +98,9 @@ $('#riskMod').highcharts({
                     color: "#f1c40f"
                 },
                 {
-                    name: 'Risky',
+                    name: 'Great',
                     y : 33,
-                    color: "#c0392b"
+                    color: "#2cc36b"
                 },
             ]
         },{

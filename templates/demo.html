@@ -23,13 +23,21 @@
 	<nav>
 	    <div class="nav-wrapper vestBar">
       		<a href="#" class="brand-logo center"><img height="100%" src="{% static 'media/images/logo.svg' %}" alt=""></a>
-			<ul style="margin-right : 40px" id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a href="{% url 'subscribe' %}">Subscribe</a></li>
-			</ul>
+			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		    <ul style="margin-right : 40px" class="right hide-on-med-and-down">
+		      	<li><a href="{% url 'subscribe' %}">Subscribe</a></li>
+		    </ul>
+		    <ul class="side-nav" id="mobile-demo">
+		      	<li><a href="{% url 'subscribe' %}">Subscribe</a></li>
+	      	</ul>
 		</div>
   	</nav>
 
-  	<div class="moduleContainer">
+  	<div id="app">
+  		
+  	</div>
+
+  	<!-- <div class="moduleContainer">
   		<div class="row moduleRow">
 		<div class="col s12 m12 l6 module orange" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
 			
@@ -75,7 +83,7 @@
 	   <li class="bottommenu-right">Comparisons</li>
 	   </ul>
 	   </div>
-   </div>
+   </div> -->
 </body>
 
 <script>
@@ -86,7 +94,12 @@
 	        }
     	}
 	});
+	$( document ).ready(function(){
+    	$(".button-collapse").sideNav();
+	});
 </script>
+
+<script src="{% static 'build/' %}"></script>
 
 <script src="{% static 'build/js/fees.js' %}"></script>
 <script src="{% static 'build/js/bar.js' %}"></script>
