@@ -9,14 +9,16 @@ var gaugeOption = {};
 
 gaugeOption.chart = {
     type: 'solidgauge',
-    backgroundColor: "#3A99D8"
+    backgroundColor: "#BBDEFB",
+    spacingBottom: 40
 };
 
 gaugeOption.title = {
     text : "",
     style : {
-        color : "white",
+        color : "#333366",
     },
+    verticalAlign: 'bottom',
     useHTML : true
 };
 
@@ -45,12 +47,12 @@ gaugeOption.yAxis = {
     ],
     lineWidth: 0,
     minorTickInterval: null,
-    tickPixelInterval: 400,
     tickWidth: 0,
+    tickPositions : [0, 2.5],
     labels: {
         y: 16,
         style : {
-            color : "white"
+            color : "#333366"
         },
         format : "{value}%"
     }
@@ -82,9 +84,12 @@ fillOption.series = [{
     data: [],
     dataLabels: {
         format: '<div style="text-align:center; margin-bottom: 15px;"><span style="font-size:25px;color:' +
-            ('white') + '">{y}%</span><br/>' +'</div>',
+            ('#333366') + '">{y}%</span><br/>' +'</div>',
         y: 0
     },
+    tooltip: {
+        valueSuffix: '%'
+    }
 }];
 
 

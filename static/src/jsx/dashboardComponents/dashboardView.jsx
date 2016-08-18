@@ -5,6 +5,8 @@ import RiskStack from './stacks/riskStack.jsx';
 import ReturnStack from './stacks/returnStack.jsx';
 import DashboardStore from '../../js/flux/stores/dashboard/dashboardStore';
 import RaisedButton from 'material-ui/RaisedButton';
+import AppActions from '../../js/flux/actions/dashboard/dashboardActions';
+import MenuFooter from './menuFooter.jsx'; 
 
 class DashboardView extends React.Component {
 
@@ -15,7 +17,13 @@ class DashboardView extends React.Component {
 
   	componentDidMount() {
 		DashboardStore.listen(this.onChange.bind(this));
-		DashboardStore.performSearch();     
+		//DashboardStore.performSearch();  
+		AppActions.loadFakeData();
+
+		this.setState({
+			topRowHeight : $("#topRow").height()
+		});
+   		
 	}
 
 	componentWillUnmount() {
@@ -52,44 +60,61 @@ class DashboardView extends React.Component {
 		}
 
 		return (
-			<div>
-				<div className="row moduleRow">
-					<div className="col s12 m6 module orange">
+				<div>
+					<div id="topRow" className="row moduleRow">
 						
-						<AssetStack data={this.state.assetStack}/>
-						
-					</div>
-					<div className="col s12 m6 module green">
-						
-						<ReturnStack data={this.state.returnStack}/>
+						<div id="assetContainer" className="col s12 m12 l6 module">
+							<AssetStack 
+								data={this.state.assetStack}
+							/>
+						</div>
+						<div id="returnContainer" className="col s12 m12 l6 module">
+							<ReturnStack 
+								data={this.state.returnStack}
+							/>
+						</div>
 
+					</div>
+
+					<div id="bottomRow" className="row moduleRow">
+						
+						<div id="riskContainer" className="col s12 m12 l6 module">
+				        	<RiskStack 
+								topRowHeight={this.state.topRowHeight}
+				        		data={this.state.riskStack}
+				        	/>
+						</div>
+						<div id="feeContainer" className="col s12 m12 l6 module">
+				        	<FeeStack 
+								topRowHeight={this.state.topRowHeight}
+				        		data={this.state.costStack} 
+				        	/>
+						</div>
+					
 					</div>
 				</div>
-
-				<div className="row moduleRow">
-					<div className="col s12 m6 module purple">
-						
-						<RiskStack data={this.state.riskStack}/>
-
-					</div>
-					<div className="col s12 m6 module blue">
-						
-						<FeeStack data={this.state.costStack} />
-
-					</div>
-				</div>
-			</div>
 		)
+	}
+
+	getMenuFooter(){
+		if(this.state.isFullScreen && !this.state.isAnimating){
+			return <MenuFooter module={this.state.currentModule}/>
+		}
+		return null;
 	}
 
     render() {
     	
         return (
-        	<div className="moduleContainer">
-		  		
-		  		{this.getInitialView()}
+        	<div>
+	        	<div className="moduleContainer">
+			  		
+			  		{this.getInitialView()}
 
-		  	</div>
+			  	</div>
+
+			  	{ this.getMenuFooter() }
+			</div>
         );
     }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import ModuleFactory from '../factories/moduleFactory';
+import AppActions from '../../../js/flux/actions/dashboard/dashboardActions';
+import { StackConst } from '../../../js/const/stack.const';
 
 class RiskStack extends React.Component {
     constructor(props) {
@@ -12,7 +14,7 @@ class RiskStack extends React.Component {
         const currentModule = stack.getCurrentModule();
 
         if(currentModule){
-            const name = currentModule.getName();
+            const name = currentModule.getModuleID();
             const data = currentModule.getData();
 
             return ModuleFactory.createModule(name, data);
@@ -20,14 +22,17 @@ class RiskStack extends React.Component {
         return null;
     }
 
+    animate(){
+        const stack = this.props.data;
+        const currentModule = stack.getCurrentModule();
+        AppActions.animate(StackConst.RISK, currentModule.getModuleID(), currentModule.getName(), this.props.topRowHeight);
+    }
+
     render() {
         return (
-        	<div id="purpleContent">
+        	<div onClick={this.animate.bind(this)}>
                 { this.getCurrentModule() }
-				<p className="modTitle L">Risks</p>
-				<div className="fullScreen TR">
-	    			<div className="fullScreen innerTR"></div>
-				</div>
+				<p id="t1" className="modTitle R">Risks</p>
 			</div>
         );
     }

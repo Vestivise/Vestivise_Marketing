@@ -22,6 +22,8 @@ export default class ModuleFactory{
 			case ModuleConst.BASIC_FEE:
 				module = (<BasicFeeModule data={data}/>);
 				break;
+			default:
+				console.log('error on create module: ' + moduleName);
 		}
 
 		return module;

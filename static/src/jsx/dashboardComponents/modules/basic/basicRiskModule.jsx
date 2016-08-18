@@ -8,19 +8,23 @@ const style = {
 const config = {};
 
 config.chart = {
-	plotBackgroundColor: null,
+	renderTo: 'riskMod',
+    plotBackgroundColor: null,
     plotBackgroundImage: null,
     plotBorderWidth: 0,
     plotShadow: false,
-    backgroundColor: "#9C27B0"
+    backgroundColor: "#BBDEFB",
+    spacingBottom: 40
 };
 
 config.title = {
-	text: 'Your risk is characterized as moderate.',
+	text: '<p class="tooltipped" data-position="top" data-delay="50" data-tooltip="If you have a portfolio that is making good returns, but is fairly risky, it\'ll end up in the middle end of the gauge">Your risk is characterized as moderate.</p>',
     align: 'center',
     style: {
-        color : 'white'
-    }
+        color : '#333366'
+    },
+    verticalAlign: 'bottom',
+    useHTML : true
 };
 
 config.tooltip = {
@@ -115,7 +119,7 @@ config.series = [{
 	},
 	{
 	    type: 'gauge',
-	    data: [0],
+	    data: [],
 	    dial: {
 	        rearLength: 0,
 	        baseWidth : 1
@@ -129,27 +133,28 @@ class BasicRiskModule extends React.Component {
         this.displayName = 'BasicRiskModule';
     }
 
+    getData(){
+
+        var gauage = 0;
+
+        if(this.props.data){
+            switch(this.props.data.riskLevel){
+                case 'safe':
+                    gauage = 20;
+                    break;
+                case 'moderate':
+                    gauage = 40;
+                    break;
+                case 'risky':
+                    gauage = 60;
+                    break;
+            }
+        }
+        config.series[1].data[0] = gauage;
+    }
+
     componentDidMount() {
-
-    	var gauage = 0;
-
-    	if(this.props.data){
-    		switch(this.props.data.riskLevel){
-    			case 'safe':
-    				gauage = 20;
-    				break;
-    			case 'moderate':
-    				gauage = 40;
-    				break;
-    			case 'risky':
-    				gauage = 60;
-    				break;
-    		}
-    	}
-
-    	config.series[1].data[0] = gauage;
-
-
+        this.getData();
     	$('#' + ModuleConst.BASIC_RISK).highcharts(config)
     }
 

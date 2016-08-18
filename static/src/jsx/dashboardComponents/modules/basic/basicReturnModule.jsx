@@ -8,67 +8,67 @@ const style = {
 var config = {};
 
 config.title = {
-	text: '',
-	style: {
-		color : "white"
-	}
+  text: '',
+  style: {
+    color : "#434778"
+  }
 };
   
 config.xAxis = {
-  	categories: [
+    categories: [
         "One Month Return",
         "Three Month Return",
         "One Year Return",
         "Three Year Return"
     ],
-   	labels: {
-		style: {
-			color : 'white'
-		}	
-	}
+    labels: {
+    style: {
+      color : '#434778'
+    } 
+  }
 };
 
 config.yAxis = {
-	title: {
-		text: 'Return Amount',
-		style: {
-			color : "white"
-		}
-	},
-	gridLineColor: 'transparent',
-	labels: {
-		style: {
-			color : 'white'
-		}	
-	}
+  title: {
+    text: 'Return Amount',
+    style: {
+      color : "#434778"
+    }
+  },
+  gridLineColor: 'transparent',
+  labels: {
+    style: {
+      color : '#434778'
+    } 
+  }
 };
 
 config.plotOptions = {
-  	line: {
-    	dataLabels: {
-        	enabled: true
-    	},   
-     	enableMouseTracking: true
-  	},
+    line: {
+      dataLabels: {
+          enabled: true
+      },   
+      enableMouseTracking: true
+    },
 };
 
 config.chart = {
-  	backgroundColor: "#4CAF50",
+    backgroundColor: null,
     type: 'column'
 };
 
 config.series= [{
-        name: '<p style="color : #ecf0f1">My Returns</p>',
+        name: '<p style="color : #434778">My Returns</p>',
         data: [1, 1, 1, 1],
-        color: "white",
+        color: "#F24258",
         dataLabels:{
             enabled : false,
         }
     },
     {
-        name: '<p style="color : #ecf0f1">Benchmark - S&P 500</p>',
-        data: [1,1,1,1],
-        color: "#F24258",
+        name: '<p style="color : #434778">Benchmark - S&P 500</p>',
+        data: [0.48,4.06,4.70,8.94],
+        color: "rgb(66,153,210)",
         dataLabels:{
             enabled : false,
         },
@@ -87,11 +87,16 @@ class BasicReturnModule extends React.Component {
     }
 
     componentDidMount() {
-    	// this.getTitle();
-    	// this.getTimeScale();
-    	// this.getPerformance();
-        console.log('test'); 
+    	this.getData();
+        console.log
     	$("#" + ModuleConst.BASIC_RETURN).highcharts(config);
+    }
+
+    getData(){
+        if(this.props.data){
+            config.series[0].data = this.props.data["returns"];
+            config.series[1].data = this.props.data["benchMark"];
+        }
     }
 
     // getTitle(){
@@ -128,7 +133,7 @@ class BasicReturnModule extends React.Component {
     // }
     
     render() {
-        return <div style={style} id={ModuleConst.BASIC_RETURN}>BasicReturnModule</div>;
+        return <div style={style} id={ModuleConst.BASIC_RETURN}></div>;
     }
 }
 

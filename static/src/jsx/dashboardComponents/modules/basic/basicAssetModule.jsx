@@ -8,13 +8,13 @@ const style = {
 var config = {};
 
 config.chart = {
-    backgroundColor: "#FF9800"
+    backgroundColor: "#BBDEFB"
 };
 
 config.title = {
    text: '', 
    style : {
-      color : "white"
+      color : "333366"
    }  
 };      
 
@@ -39,9 +39,10 @@ config.plotOptions = {
 config.series= [{
    type: 'pie',
    name: 'Share',
+   allowPointSelect: false,
    data: [],
    dataLabels : {
-      color : 'white'
+      color : '#333366'
    }
 }];
 

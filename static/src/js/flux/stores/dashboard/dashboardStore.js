@@ -1,84 +1,17 @@
 import alt from '../../alt';
 import { StackConst } from '../../../const/stack.const';
 import AppActions from '../../actions/dashboard/dashboardActions';
-import API from '../../../api';
-
-class Module{
-
-    constructor(moduleName, account, isAddOn, endpoint){
-        this.moduleName = moduleName;
-        this.account = account;
-        this.isAddOn = isAddOn;
-        this.endpoint = endpoint;
-    }
-
-    getName(){
-        return this.moduleName;
-    }
-
-    getAccount(){
-        return this.account;
-    }
-
-    getChartJSON(){
-
-    }
-
-    getChartCSS(){
-
-    }
-
-    isAddOn(){
-        return this.isAddOn;
-    }
-
-    getData(){
-        return API.get(Urls.broker(this.endpoint));
-    }
-
-}
-
-class Stack{
-
-	constructor(){
-		this.index = -1;
-		this.modules = [];
-	}
-
-    getCurrentModule(){
-        if(this.index == -1){
-            return null;
-        }
-        return this.modules[this.index];
-    }
-
-	pushModule(module){
-        const name = module.moduleName;
-        const account = module.account;
-        const isAddOn = module.isAddOn;
-        const endpoint = module.endpoint;
-        const m = new Module(name, account, isAddOn, endpoint);
-		this.modules.push(m);
-		if(this.index == -1){
-			this.index = 0;
-		}
-	}
-
-	next(){
-		if(this.index++ == this.modules.length){
-			this.index = 0;
-		}
-	}
-
-}
+import Stack from "./stack";
+import Animation from "../../../animation/dashboard.js";
 
 class DashboardStore{
 
 	constructor(){
 		this.bindListeners({
 			nextModuleInStack : AppActions.nextModuleInStack,
-			loadDashboard : AppActions.dataLoading,
 			loadBasicAccountData : AppActions.dataSuccess,
+            loadBasicAccountData : AppActions.loadFakeData,
+            animate : AppActions.animate
 	    });
 
 	    this.state = {
@@ -87,10 +20,12 @@ class DashboardStore{
 	    	costStack : new Stack(),
 	    	assetStack : new Stack(),
 	    	isLoading : false,
-            hasLinkedAccount : false
+            hasLinkedAccount : true,
+            isAnimating : false,
+            isFullScreen : false,
+            currentModule : ""
 	    };
 	}
-
 
     loadBasicAccountData(data){
 
@@ -135,8 +70,59 @@ class DashboardStore{
     		costStack : costStack,
     		assetStack : assetStack 
     	});
-
     }
+
+    animate(payload){
+
+        const stack = payload.stack;
+        const module = payload.moduleName;
+        const moduleID = payload.moduleID;
+        const topRowHeight = payload.topRowHeight;
+        var isFullScreen = this.state.isFullScreen;
+
+        if(this.state.isAnimating){
+            return;
+        }
+
+        var handleAnimation = function(){
+            this.setState({
+                isAnimating : !this.state.isAnimating,
+                currentModule : module
+            });
+        }.bind(this);
+
+        handleAnimation();
+
+        this.setState({
+            isFullScreen : !isFullScreen
+        });
+
+        var animationFunction = null;
+
+        switch(stack){
+            case StackConst.RISK:
+                animationFunction = Animation.animateRisk;
+                break;
+            case StackConst.RETURN:
+                animationFunction = Animation.animateReturn;
+                break;
+            case StackConst.ASSET:
+                animationFunction = Animation.animateAssets;
+                break;
+            case StackConst.COST:
+                animationFunction = Animation.animateCost;
+                break;
+        }
+
+        animationFunction(
+            moduleID,
+            isFullScreen,
+            topRowHeight,
+            handleAnimation.bind(this)
+        );
+    }
+
+    performSearch(){}
 
     nextModuleInStack(stack){
     	var state;

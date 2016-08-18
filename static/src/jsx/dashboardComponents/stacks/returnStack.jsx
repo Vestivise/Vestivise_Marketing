@@ -1,5 +1,7 @@
 import React from 'react';
 import ModuleFactory from '../factories/moduleFactory';
+import AppActions from '../../../js/flux/actions/dashboard/dashboardActions';
+import { StackConst } from '../../../js/const/stack.const';
 
 class ReturnStack extends React.Component {
     constructor(props) {
@@ -11,25 +13,26 @@ class ReturnStack extends React.Component {
         const stack = this.props.data;
         const currentModule = stack.getCurrentModule();
 
-        console.log('helllooo');
-
         if(currentModule){
-            const name = currentModule.getName();
+            const name = currentModule.getModuleID();
             const data = currentModule.getData();
-
             return ModuleFactory.createModule(name, data);
         }
         return null;
     }
 
+    animate(){
+
+        const stack = this.props.data;
+        const currentModule = stack.getCurrentModule();
+        AppActions.animate(StackConst.RETURN, currentModule.getModuleID(), currentModule.getName(), null);
+    }
+
     render() {
         return (
-        	<div id="greenContent">
+        	<div onClick={this.animate.bind(this)}>
 				{this.getCurrentModule()}
-				<p className="modTitle R">Returns</p>
-				<div className="fullScreen BL">
-	    			<div className="fullScreen innerBL"></div>
-				</div>	
+				<p className="modTitle L">Returns</p>
 			</div>
         );
     }
