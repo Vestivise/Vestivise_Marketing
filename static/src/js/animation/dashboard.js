@@ -92,11 +92,10 @@ Animation.animateReturn = function(moduleName, isFullScreen, topRowHeight, callb
 				$('#feeContainer').show();
 
 				$('#returnContainer').css({
-					"marginLeft": "0",
+					marginLeft: 0,
 				});
-				$('.modTitle').css('display', 'block');
-				returnGraph = false;
-				lock = false;
+
+				callback();
 			}
 		});
 	}
