@@ -27,10 +27,6 @@ config.title = {
     useHTML : true
 };
 
-config.tooltip = {
-	enabled : false
-}
-
 config.pane = {
 	center: ['50%', '88%'],
     startAngle: -90,
@@ -61,6 +57,37 @@ config.yAxis = [{
     },
     pane: 0,
 }];
+
+
+config.tooltip = {
+    formatter : function(){
+
+        var tooltips = [
+            "If you have a high amount of risk, and you're not getting very much money from them, you will end in the lower end of the gauge",
+            "If you have a portfolio that is making good returns, but is fairly risky, it'll end up in the middle end of the gauge",
+            "If you have a low amount of risk, and a high amount of returns, then your portfolio will end up in the very high end of the gauge"
+        ];
+
+        var series = this.point.series.chart.series, // get all series 
+                    index = this.point.series.xData.indexOf(this.point.x), // get index
+                    toolTip = tooltips[index];
+
+        var words = toolTip.split(/[\s]+/);
+        var numWordsPerLine = 8;
+        var str = [];
+
+        for (var word in words) {
+            if (word > 0 && word % numWordsPerLine == 0)
+                str.push('<br>');
+
+            str.push(words[word]);
+        }
+
+        return str.join(' ');
+    },
+    enabled : true,
+    useHTML : true
+}
 
 config.credits = {
 	enabled : false
@@ -101,9 +128,9 @@ config.series = [{
     name: 'Risk',
     data: [
 	        {
-	            name: 'Safe',
+	            name: 'Bad',
 	            y : 33,
-	            color: "#2cc36b"
+	            color: "#c0392b"
 	        },
 	        {
 	            name: 'Moderate',
@@ -111,9 +138,9 @@ config.series = [{
 	            color: "#f1c40f"
 	        },
 	        {
-	            name: 'Risky',
+	            name: 'Great',
 	            y : 33,
-	            color: "#c0392b"
+	            color: "#2cc36b"
 	        },
     	]
 	},
