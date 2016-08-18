@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^subscribe/$', TemplateView.as_view(template_name='landingPage.html'), name='subscribe'),
     url(r'^api/mailChimp$', views.subscribeToMailChimp, name='mailChimpSubscribe'),
-    url(r'^demo/$', TemplateView.as_view(template_name='demo.html')),
+    url(r'^demo/$', TemplateView.as_view(template_name='demo.html'), name='demo'),
     url(r'^jsreverse/$', 'django_js_reverse.views.urls_js', name='js_reverse'),
 
 ]

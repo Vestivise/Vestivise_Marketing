@@ -23,59 +23,17 @@
 	<nav>
 	    <div class="nav-wrapper vestBar">
       		<a href="#" class="brand-logo center"><img height="100%" src="{% static 'media/images/logo.svg' %}" alt=""></a>
-			<ul style="margin-right : 40px" id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a href="{% url 'subscribe' %}">Subscribe</a></li>
-			</ul>
+			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		    <ul style="margin-right : 40px" class="right hide-on-med-and-down">
+		      	<li><a href="{% url 'subscribe' %}">Subscribe</a></li>
+		    </ul>
+		    <ul class="side-nav" id="mobile-demo">
+		      	<li><a href="{% url 'subscribe' %}">Subscribe</a></li>
+	      	</ul>
 		</div>
   	</nav>
 
-  	<div class="moduleContainer">
-  		<div class="row moduleRow">
-		<div class="col s12 m12 l6 module orange" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
-			
-			<div id="orangeContent">
-				<div id="toggleChart" class="fixed-action-btn">
-				    <a style="display: none;" id="toggleChartBtn" class="btn-floating blue waves-effect">
-				      <i class="large material-icons">insert_chart</i>
-				    </a>
-				</div>
-				<div id="assetBreakMod"></div>
-				<p class="modTitle R">Assets</p>
-			</div>
-			
-		</div>
-		<div class="col s12 m12 l6 module green" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
-			<div id="greenContent">
-				<div id="returnPerYearMod"></div>
-				<p class="modTitle L">Returns</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="row moduleRow">
-		<div class="col s12 m12 l6 module purple" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
-			<div id="purpleContent">
-            <p id="t1" class="modTitle R" style="z-index:999999;">Risks</p>
-				<div id="riskMod"></div>
-			</div>
-		</div>
-		<div class="col s12 m12 l6 module blue" style="background: #BBDEFB !important; border:solid; border-color: #f34258; border-width: 2px;">
-			<div id="blueContent">
-            <p id="t2" class="modTitle L" style="z-index:999999;">Costs</p>
-				<div id="feeMod"></div>
-			</div>
-		</div>
-	</div>
-  	</div>
-   <div id="footer" class="row">
-   	<div id="bmenu-wrapper" class="col l12 module pink">
-	   <ul class="bottommenu">
-	   <li class="bottommenu-left">Insights</li>
-	   <li class="bottommenu-center">Assets</li>
-	   <li class="bottommenu-right">Comparisons</li>
-	   </ul>
-	   </div>
-   </div>
+  	<div id="app"></div>
 </body>
 
 <script>
@@ -86,13 +44,11 @@
 	        }
     	}
 	});
+	$( document ).ready(function(){
+    	$(".button-collapse").sideNav();
+	});
 </script>
 
-<script src="{% static 'build/js/fees.js' %}"></script>
-<script src="{% static 'build/js/bar.js' %}"></script>
-<script src="{% static 'build/js/pie.js' %}"></script>
-<script src="{% static 'build/js/risk.js' %}"></script>
-
-<script src="{% static 'build/js/fullScreen.js' %}"></script>
+<script src="{% static 'build/js/dashboard/dashboardApp.min.js' %}"></script>
 
 </html>
