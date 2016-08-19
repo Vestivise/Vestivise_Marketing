@@ -9,13 +9,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Vestivise – Simple Investment Reporting</title>
+  <title>Vestivise – Simple Retirement Investment Reporting</title>
   <link href="{% static 'build/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'build/css/font-awesome.min.css' %}" rel="stylesheet">
   <link href="{% static 'build/css/lightbox.css' %}" rel="stylesheet">
   <link href="{% static 'build/css/main.css' %}" rel="stylesheet">
   <link id="css-preset" href="{% static 'build/css/presets/preset1.css' %}" rel="stylesheet">
   <link href="{% static 'build/css/responsive.css' %}" rel="stylesheet">
+  <link href="{% static 'build/css/marketingPage.css' %}" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="{% static 'build/js/html5shiv.js"></script>
@@ -38,7 +39,7 @@
         <div class="item active" style="background-image: url({% static 'media/images/slider/1.jpg' %})">
           <div class="caption">
             <h1 class="animated fadeInLeftBig"><span>Vestivise</span></h1>
-             <p class="animated fadeInRightBig">SIMPLE INVESTMENT REPORTING</p>
+             <p class="animated fadeInRightBig">SIMPLE RETIREMENT INVESTMENT REPORTING</p>
             <a id="tohash" class="btn btn-start animated fadeInUpBig" href="#slug">Learn More</a>
           </div>
         </div>
@@ -73,7 +74,7 @@
     </div><!--/#main-nav-->
     <section id="slug">
     <br>
-       <h2  align="center" style="margin: 25% 10% 25% 10%; font-weight: 300; letter-spacing: 120%; line-height: 1.5em;">Most people don’t reach their investment goals.<br><br>We keep investment reporting simple so that in the good times and bad,<br>we will be there to guide you.</h2>
+       <h2  align="center" style="margin: 25% 10% 25% 10%; font-weight: 300; letter-spacing: 120%; line-height: 1.5em;">Most people don’t reach their retirement goals.<br><br>We keep 401(k) and IRA reporting simple so that in the good times and bad,<br>we will be there to guide you.</h2>
   </section><!--/#slug-->
    <section id="past" style="background:rgba(255,255,255,1.00)"> 
     <div class="container">
@@ -127,7 +128,7 @@
       <div class="row">
           <div class="text-center col-sm-6">
             <h2>Features</h2>
-            <p align="left" style="font-weight:bold; font-size:large;">Vestivise shows your investments clearly and concisely.</p>
+            <p align="left" style="font-weight:bold; font-size:large;">Vestivise shows your investment accounts clearly and concisely.</p>
         <p align="left" style="font-size:large;">The Vestivise summary gives a complete overview of your assets. Our application is quick, intuitive, and extremely accurate. Our secure account linkage process automatically pulls your personal investment information upon creating an account. Take a look at our <a href="https://www.vestivise.com/demo/" target="_blank">demo</a> to find out more! You can also <a href="https://app.vestivise.com/">sign up now</a> for a personalized investment report.
         </p>
         <ul  class = "featuresList" style="font-size:medium;">
@@ -151,7 +152,7 @@
     <div class="container">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
           <div class="row">
-          <h2>Vestivise Premium</h2>
+          <h2>Vestivise</h2>
           Coming Fall 2016<br><br>
           <p align="left" style="font-size:large;">
           The same simple investment reporting with deep insights
@@ -164,6 +165,9 @@ From the aspects you’ve considered to the areas you’ve
 never thought about, Vestivise Premium provides your
 complete investment profile.
           </p>
+          <br>
+          <br>
+          <a href="{% url 'subscribe' %}" class="waves-effect waves-light btn vestiRed">Be The First To Know</a>
         </div>
       </div>
     </div>
