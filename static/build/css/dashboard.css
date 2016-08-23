@@ -10,6 +10,14 @@ body{
     margin-bottom: 0px !important;
 }
 
+#premiumPromoHead{
+	color: #D44154;
+}
+
+.premiumOfferingsHead{
+	color: #26A69A;
+}
+
 #bmenu-wrapper{
     height: 13vh; 
     width:100%; 
@@ -86,6 +94,11 @@ body{
 	float: none;
 	color:white;
 }
+
+.bottommenu-left,.bottommenu-right{
+	cursor: pointer !important;
+}
+
 	
 .bottommenu-left{
 }
@@ -95,6 +108,10 @@ body{
 	padding-right: 20vw;
 	font-weight:bold;
 	font-size: larger;
+}
+
+.callToAction{
+	color: #D44154;
 }
 
 .bottommenu-right{

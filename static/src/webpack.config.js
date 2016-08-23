@@ -39,14 +39,14 @@ module.exports = {
             }
         ]
     },
-    plugins: [
+    plugins: production ? [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false, compress : {warnings: true} }),
-        production ? new webpack.DefinePlugin({
+        new webpack.DefinePlugin({
             'process.env':{
                 'NODE_ENV': JSON.stringify('production')
             }
-        }) : null,
-    ],
+        }),
+    ] : null,
 };
