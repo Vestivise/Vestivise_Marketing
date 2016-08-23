@@ -1,4 +1,6 @@
 {% load staticfiles %}
+{% load js_reverse %}
+
 
 <html>
 <head>
@@ -16,6 +18,7 @@
 	<script src="https://code.highcharts.com/highcharts-more.js"></script>
    	<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<script src="{% url 'js_reverse' %}" type="text/javascript"></script>
 
 </head>
 <body>

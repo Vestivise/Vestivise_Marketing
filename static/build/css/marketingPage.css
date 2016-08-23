@@ -36,3 +36,26 @@ span {
   background-color: #D44154;
   color: white !important;
 }
+
+.singleFeature{
+  text-align:left;
+  padding-bottom: 0.5em;
+  line-height: 40px;
+}
+
+.descriptionText{
+  text-align: left;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.descriptionText.smallText{
+  font-size: 18px;
+  line-height: 40px;
+}
+
+#purposeImage{
+  min-width: 80%; 
+  max-width:100%;
+  margin-top: 23px;
+}
