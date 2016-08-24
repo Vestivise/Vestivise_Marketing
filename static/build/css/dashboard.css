@@ -6,6 +6,15 @@ body{
 
 }
 
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.02) !important;
+    z-index: 1 !important;
+    border-style: none;
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19) !important;
+}
+
 #footer{
     margin-bottom: 0px !important;
 }

@@ -41,6 +41,14 @@ class DashboardView extends React.Component {
 		return this.getLoadedView();
 	}
 
+	getFullScreenClass(){
+		var fClass = "col s12 m12 l6 module";
+		if(!this.state.isFullScreen && !this.state.isAnimating){
+			fClass  = fClass + " hvr-grow";
+		}
+		return fClass;
+	}
+
 	getLoadedView(){
 		if(!this.state.hasLinkedAccount){
 			return (
@@ -63,12 +71,12 @@ class DashboardView extends React.Component {
 				<div>
 					<div id="topRow" className="row moduleRow">
 						
-						<div id="assetContainer" className="col s12 m12 l6 module">
+						<div id="assetContainer" className={this.getFullScreenClass()}>
 							<AssetStack 
 								data={this.state.assetStack}
 							/>
 						</div>
-						<div id="returnContainer" className="col s12 m12 l6 module">
+						<div id="returnContainer" className={this.getFullScreenClass()}>
 							<ReturnStack 
 								data={this.state.returnStack}
 							/>
@@ -78,13 +86,13 @@ class DashboardView extends React.Component {
 
 					<div id="bottomRow" className="row moduleRow">
 						
-						<div id="riskContainer" className="col s12 m12 l6 module">
+						<div id="riskContainer" className={this.getFullScreenClass()}>
 				        	<RiskStack 
 								topRowHeight={this.state.topRowHeight}
 				        		data={this.state.riskStack}
 				        	/>
 						</div>
-						<div id="feeContainer" className="col s12 m12 l6 module">
+						<div id="feeContainer" className={this.getFullScreenClass()}>
 				        	<FeeStack 
 								topRowHeight={this.state.topRowHeight}
 				        		data={this.state.costStack} 
