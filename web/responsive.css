@@ -1,0 +1,185 @@
+@media screen and (max-width:750px){
+
+	#header{
+		margin:0;
+		padding:15px 0;
+		transition:.3s
+		}
+
+	#header #navigation{
+		display:none;
+		float:none;
+		margin:30px 0 0
+		}
+
+	#header #navigation a{
+		display:block;
+		margin:0;
+		padding:10px 2px;
+		border-top:1px solid rgba(255,255,255,.3)
+		}
+
+	#header #navigation hr{
+		display:none
+		}
+
+	#header #mobile_slide{
+		display:inline-block
+		}
+
+	#cover #cover-bg{
+		height:360px
+		}
+
+	#cover h1{
+		font-size:30px;
+		margin:15px 0 0
+		}
+
+	#container #intro{
+		margin:60px auto
+		}
+
+	#container h2{
+		margin:-7.5px auto 60px;
+		font-size:30px
+		}
+
+	#section-features .feature{
+    	max-width:600px;
+		margin:0 auto 30px
+		}
+
+	#section-features .feature:nth-of-type(even){
+		direction:auto
+		}
+
+	#section-features .feature-image,
+	#section-features .feature-text{
+		display:block;
+		width:100%
+	    }
+
+	#section-features .feature-text .text{
+    	position:relative;
+    	width:100%;
+    	top:auto;
+    	left:auto;
+	    -webkit-transform:none;
+    	transform:none;
+    	padding:20px
+		}
+
+	#section-features .feature-text .text h3{
+	    margin:-2.5px 0 5px
+	    }
+
+	hr.divider{
+		margin:60px 0
+		}
+
+	#section-benifits ol{
+    	max-width:600px
+		}
+
+	#section-benifits ol li{
+		width:100%;
+		padding:30px;
+		margin:0 0 10px !important
+		}
+
+	#content{
+    	padding:60px
+		}
+	
+	#content .expand-list.margin-bottom{
+		margin-bottom:60px
+		}
+	
+	#content .expand-list li{
+		font-size:16px;
+		padding:16px 0
+		}
+
+	#content .expand-list li button{
+		top:16px
+		}
+
+	#content .expand-list .expand-click{
+		height:70px
+		}
+
+	#content .expand-list li h2{
+		width:85%;
+    	white-space:nowrap;
+    	text-overflow:ellipsis;
+	    overflow:hidden;
+    	vertical-align:middle;
+		font-size:16px
+		}
+
+	#content .expand-list li p{
+		padding:0 0 0 18px
+		}
+
+}
+
+@media screen and (max-width:480px){
+
+	body{
+		-webkit-overflow-scrolling:touch
+		}
+
+	p,ol,ul{
+		font-size:14px
+    	}
+
+    h1,h2{
+    	font-size:30px
+	    }
+
+	#cover #cover-bg{
+		height:300px
+		}
+
+	#container #intro{
+		font-size:24px
+		}
+
+	#section-pricing #pricing-lines{
+		display:none
+		}
+
+	#section-pricing .cta{
+		display:block;
+		float:none !important;
+		margin:10px auto
+		}
+
+	#content{
+    	margin:-240px auto 0;
+    	padding:30px
+    	}
+
+	#content p{
+		margin:22px 0
+		}
+
+	#content .expand-list li p{
+		padding:0
+		}
+
+	#content .expand-list li ul{
+		padding:0 0 0 18px
+		}
+
+	#footer{
+		margin:60px auto
+		}
+
+}
+
+@media screen and (max-width:360px){
+
+
+}

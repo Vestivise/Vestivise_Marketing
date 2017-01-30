@@ -1,6 +1,0 @@
-Django==1.9.7
-django-filter==0.13.0
-django-js-reverse==0.7.2
-djangorestframework==3.3.3
-Markdown==2.6.6
-Requests==2.10.0
