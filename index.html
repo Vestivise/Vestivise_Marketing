@@ -25,8 +25,15 @@
 <link href="web/socialMediaStyle.css" rel="stylesheet" type="text/css">
 <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
 
-
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
 <link href="web/responsive.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+<!--<![endif]-->
+
 <script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -82,96 +89,123 @@ src="https://www.facebook.com/tr?id=253771855073649&ev=PageView&noscript=1"
 		<span class="css_fadeup delay-17">
 			<a id="signUpButton" href="https://app.vestivise.com/register" class="cta">Free Sign Up!</a>
 		</span>
+		<br>
+		<span class="css_fadeup delay-18">
+			<p id="powered-by">Powered by <a href="https://www.quovo.com/"><img class="wrap" src="img/quovo.png" alt=""></a> and <a href="https://www.morningstar.com"><img class="wrap-1" src="img/morningstar.png" alt=""></a></p>
+		</span>
 		</h1>
 	<div id="cover-bg"></div>
 </div>
 
 <main id="container">
-<div class="width">
 
-	<h2 id="intro">We help people understand their investments regardless of their financial knowledge.</h2>
-	<div id="section-features">
-		<h2>Features</h2>
-		<div class="feature">
-			<div class="feature-image">
-				<img src="img/feature-1.jpg">
+	<div class="width">
+		<h2 id="intro">We help people understand their investments regardless of their financial knowledge.</h2>
+		<div id="press-container">
+			<h2>Our Press Coverage</h2>
+
+			<div class="pure-g">
+				<div class="pure-u-md-1-4 pure-u-sm-5-5">
+			    	<a href="http://www.stannals.org/the-story-of-josh-gelinas-his-insights-his-vision-and-his-advice-for-entrepreneurs/"><img src="img/stannals.png" alt=""></a>
+			    </div>
+			    <div class="pure-u-md-1-4 pure-u-sm-5-5">
+			    	<a href="http://futuresharks.com/josh-gelinas/"><img src="img/future_sharks.png" alt=""></a>
+			    </div>	
+			    <div class="pure-u-md-1-4 pure-u-sm-5-5">
+					<a href="http://tellmenothing.com/2017/02/23/josh-gelinas-20-year-old-investment-entrepreneur/"><img src="img/tell_me_nothing.png" alt=""></a>	
+			    </div>
+			    <div class="pure-u-md-1-4 pure-u-sm-5-5">
+			    	<a href="https://medium.com/intheirshoes/josh-gelinas-its-true-that-most-twenty-somethings-are-less-concerned-about-what-they-will-be-e4f647df0cd2#.sn6ivpuhn"><img src="img/in_their_shoes.png" alt=""></a>	
+			    </div>
 			</div>
-			<div class="feature-text">
-				<div class="text">
-					<h3>Simplicity</h3>
-					<p>Because the confusing reports asset managers provide lack essential information.</p>
+		</div>
+		<div id="section-features">
+			<h2>Features</h2>
+			<div class="feature">
+				<div class="feature-image">
+					<img src="img/feature-1.jpg">
+				</div>
+				<div class="feature-text">
+					<div class="text">
+						<h3>Simplicity</h3>
+						<p>Because the confusing reports asset managers provide lack essential information.</p>
+					</div>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature-image">
+					<img src="img/feature-2.jpg">
+				</div>
+				<div class="feature-text">
+					<div class="text">
+						<h3>Education</h3>
+						<p>To alleviate the difficulties of obtaining financial knowledge for successful retirement investing.</p>
+					</div>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature-image">
+					<img src="img/feature-3.jpg">
+				</div>
+				<div class="feature-text">
+					<div class="text">
+						<h3>Combination</h3>
+						<p>Of investment accounts so you can see your full portfolio all together in one place.</p>
+					</div>
+				</div>
+			</div>
+			<div class="feature">
+				<div class="feature-image">
+					<img src="img/feature-4.jpg">
+				</div>
+				<div class="feature-text">
+					<div class="text">
+						<h3>Accessibility</h3>
+						<p>So you can access investment information easily at any time.</p>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="feature">
-			<div class="feature-image">
-				<img src="img/feature-2.jpg">
-			</div>
-			<div class="feature-text">
-				<div class="text">
-					<h3>Education</h3>
-					<p>To alleviate the difficulties of obtaining financial knowledge for successful retirement investing.</p>
-				</div>
-			</div>
+		<hr class="divider">
+		<div id="section-benifits">
+			<h2>Benefits</h2>
+			<ol>
+				<li><h3><span>1</span> Wellness</h3><p>You can improve your overall financial wellness through a deeper understanding of your portfolio.</p></li>
+				<li><h3><span>2</span> Transparency</h3><p>We provide you with real transparency for your investments. </p></li>
+				<li><h3><span>3</span> Engagement</h3><p>Our simple design keeps you engaged with your portfolio over time.</p></li>
+				<li><h3><span>4</span> Foresight</h3><p>By seeing your portfolio clearly, you will develop the foresight to plan your financial future.</p></li>
+			</ol>
 		</div>
-		<div class="feature">
-			<div class="feature-image">
-				<img src="img/feature-3.jpg">
-			</div>
-			<div class="feature-text">
-				<div class="text">
-					<h3>Combination</h3>
-					<p>Of investment accounts so you can see your full portfolio all together in one place.</p>
-				</div>
-			</div>
-		</div>
-		<div class="feature">
-			<div class="feature-image">
-				<img src="img/feature-4.jpg">
-			</div>
-			<div class="feature-text">
-				<div class="text">
-					<h3>Accessibility</h3>
-					<p>So you can access investment information easily at any time.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<hr class="divider">
-	<div id="section-benifits">
-		<h2>Benefits</h2>
-		<ol>
-			<li><h3><span>1</span> Wellness</h3><p>You can improve your overall financial wellness through a deeper understanding of your portfolio.</p></li>
-			<li><h3><span>2</span> Transparency</h3><p>We provide you with real transparency for your investments. </p></li>
-			<li><h3><span>3</span> Engagement</h3><p>Our simple design keeps you engaged with your portfolio over time.</p></li>
-			<li><h3><span>4</span> Foresight</h3><p>By seeing your portfolio clearly, you will develop the foresight to plan your financial future.</p></li>
-		</ol>
-	</div>
-	<div id="section-pricing">
-		<div id="pricing">
+		<div id="section-fi">
+			<h1 id="fi-header">Thanks to our wonderful partnerships, Vestivise safely and swiftly connects any of your accounts from over 14,000 financial institutions including:</h1>
 			<div class="border">
-				<h2>Security</h2>
-				<p>Bank-Level Security and 256-bit SSL encryption.</p>
+				<img id="fi" src="img/fi.jpeg" alt="">	
 			</div>
 		</div>
-		<div id="pricing-lines"></div>
-		<div class="clear"></div>
-		<div id="pricing-cta">
-			<a href="http://app.vestivise.com/demo" class="cta">View Demo</a>
-			<a href="contact.html" class="cta">Contact Us</a>
-		</div>
-		<div class="clear"></div>
-		<div id="wrapper">  
-			<div class='row'>
-				<a href="https://www.facebook.com/vestivise/" class='socicon-facebook'></a>
-				<a href="https://twitter.com/vestivise" class='socicon-twitter'></a>
-				<a href="https://www.linkedin.com/company/vestivise" class='socicon-linkedin'></a>
-				<a href="https://www.instagram.com/vestivise/?hl=en" class='socicon-instagram'></a>
+		<div id="section-pricing">
+			<div id="pricing">
+				<div class="border">
+					<h2>Security</h2>
+					<p>Bank-Level Security and 256-bit SSL encryption.</p>
+				</div>
 			</div>
-		</div> 
+			<div id="pricing-lines"></div>
+			<div class="clear"></div>
+			<div id="pricing-cta">
+				<a href="http://app.vestivise.com/demo" class="cta">View Demo</a>
+				<a href="contact.html" class="cta">Contact Us</a>
+			</div>
+			<div class="clear"></div>
+			<div id="wrapper">  
+				<div class='row'>
+					<a href="https://www.facebook.com/vestivise/" class='socicon-facebook'></a>
+					<a href="https://twitter.com/vestivise" class='socicon-twitter'></a>
+					<a href="https://www.linkedin.com/company/vestivise" class='socicon-linkedin'></a>
+					<a href="https://www.instagram.com/vestivise/?hl=en" class='socicon-instagram'></a>
+				</div>
+			</div> 
+		</div>
 	</div>
-
-</div>
 </main>
 
 <footer id="footer">
