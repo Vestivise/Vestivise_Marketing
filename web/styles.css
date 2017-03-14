@@ -32,19 +32,21 @@ a{
     padding-bottom: 100px;
 }
 
+
 .wrap {
-    width: 80px !important;
+    width: 100px !important;
     display: inline;
 }
 
 .wrap-1 {
-    width: 120px !important;
+    width: 180px !important;
     display: inline;
 }
 
 #powered-by{
     color: white;
     font-size: 22px;
+    letter-spacing: 5px;
 }
 
 *,*:before,*:after{
@@ -761,6 +763,36 @@ hr.divider{
 
 #sign_up-button{
     margin-top: 300px;
+}
+
+@media screen and (max-width: 992px) {
+    #powered-by{
+        color: white;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    #fi-header{
+        font-size: 80%;
+    }
+
+    .press{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pure-u-sm-5-5{
+        width: 100% !important;
+    }
+
+    .wrap {
+        width: 50px !important;
+    }
+
+    .wrap-1 {
+        width: 90px !important;
+    }
+
 }
 
 /*  9.0  ANIMATION - END  */
