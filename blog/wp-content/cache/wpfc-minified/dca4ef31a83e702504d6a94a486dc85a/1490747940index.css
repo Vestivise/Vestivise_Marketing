@@ -1,0 +1,83 @@
+i.mce-i-icon{
+margin:0 0 0 -2px;
+padding:0 2px 0 0;
+vertical-align:top;
+font:400 20px/1 dashicons;
+speak:none;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale
+}
+.phase-button{
+-webkit-transition:.3s;
+transition:.3s
+} .phase-button{
+display:inline-block;
+margin:5px;
+padding:12px 14px;
+text-align:center;
+text-decoration:none !important;
+font-size:14px;
+font-weight:bold;
+line-height:16px;
+color:#fff !important;
+background:#262626;
+border-radius:2px;
+box-shadow:inset 0 0 0 1px rgba(0,0,0,.025);
+cursor:pointer
+}
+.phase-button.small{
+font-size:12px;
+padding:10px 13px
+}
+.phase-button.large{
+font-size:16px;
+font-weight:bold;
+padding:16px 20px
+}	
+.phase-button.round{
+border-radius:200px
+}
+.phase-button:hover,
+.phase-button:focus{
+color:#fff
+}
+.phase-button:hover{
+box-shadow:inset 0 0 0 1px rgba(0,0,0,.015)
+}
+.phase-button:active{
+position:relative;
+top:1px
+} .phase-button.black{background:#333}
+.phase-button.black:hover{background:#555}	 
+.phase-button.blue{background:#22a3e5}
+.phase-button.blue:hover{background:#33b4d6}
+.phase-button.green{background:#3ac792}
+.phase-button.green:hover{background:#4bd8a3}
+.phase-button.orange{background:#ec5f30}
+.phase-button.orange:hover{background:#fd6d41}
+.phase-button.red{background:#f25252}
+.phase-button.red:hover{background:#f36363}
+.phase-button.turqoise{background:#49cec4}
+.phase-button.turqoise:hover{background:#5adfd5}
+.phase-button.yellow{background:#fbda59}
+.phase-button.yellow:hover{background:#fedd8c}  .phase-alert{
+display:block;
+position:relative;
+margin:0 0 25px 0;
+padding:15px 25px;
+line-height:1.8em;
+border-radius:2px;
+box-shadow:inset 0 0 0 1px rgba(0,0,0,.05)
+}
+.phase-alert.blue{color:#4385bc;background:#d2ecff}
+.phase-alert.green{color:#43bc73;background:#d2ffe4}
+.phase-alert.red{color:#e85f5f;background:#ffd2d2}
+.phase-alert.yellow{color:#bca143;background:#fff5d2}  .phase-highlight{
+padding:2px 5px
+}
+.phase-highlight.blue{color:#1a83a5;background:#bce9fc}
+.phase-highlight.green{color:#1aa57c;background:#bcfce2}
+.phase-highlight.red{color:#a54b1a;background:#fcbcbc}
+.phase-highlight.yellow{color:#a5651a;background:#fff49b}
+.phase-highlight.italic{font-style:italic}
+.phase-highlight.bold{font-weight:bold}
