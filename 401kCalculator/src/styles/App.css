@@ -1,0 +1,228 @@
+/* Base Application Styles */
+body {
+  color: white;
+  background: #F43E54;
+  font-family: "Graphik",Helvetica,Arial,sans-serif !important;
+  overflow-x: hidden;
+}
+
+#logo{
+    height: 50%;
+    width: 50%;
+}
+
+#logo2{
+  height: 70%;
+  width: 20%;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+
+#nav{
+  background-color : #F43E54 !important;
+}
+
+#intro, #loading-container{
+  margin-top: 100px;
+}
+
+.info-collect{
+  margin-top: 100px;
+  text-align: center;
+}
+
+form p{
+    text-align: center;
+}
+
+.sk-wave .sk-rect {
+    background-color: white !important;
+}
+
+.container{
+  text-align: center;
+
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.container p, .container a{
+  line-height: 50px !important;
+  font-size: 24px;
+  color: white;
+}
+
+.slick-slide {
+  outline: none !important;
+}
+
+.info-collect input[type=submit]{
+  margin-top : 20px;
+}
+
+.info-collect input[type=text]{
+  font-size: 30px;
+}
+
+.info-collect h1{
+  font-size: 50px;
+}
+
+#app-container h5{
+  color: black;
+  font-size: 130%;
+}
+
+.info-panel {
+  height: 160px;
+}
+
+input{
+  text-align: center;
+}
+
+.button-container{
+  width:inherit !important;
+}
+
+.sk-wave{
+    height: 200px !important;
+    font-size: 300px;
+}
+
+@font-face{
+    font-family:"Graphik";
+    font-weight:400;
+    src:url('../fonts/Graphik-Regular.woff2') format('woff2'),
+        url('../fonts/Graphik-Regular.woff') format('woff')
+}
+
+@font-face{
+    font-family:"Graphik";
+    font-weight:500;
+    src:url('../fonts/Graphik-Medium.woff2') format('woff2'),
+        url('../fonts/Graphik-Medium.woff') format('woff')
+}
+
+@font-face{
+    font-family:"Graphik";
+    font-weight:700;
+    src:url('../fonts/Graphik-Bold.woff2') format('woff2'),
+        url('../fonts/Graphik-Bold.woff') format('woff')
+}
+
+.max-width{
+    width: 100%;
+}
+
+.intro-button{
+  width: 50%;
+  margin-top: 50px;
+}
+
+.input-field{
+    color: black;
+}
+
+.margin-row{
+    margin-top: 90px;
+}
+
+.btn{
+    text-transform: none !important;
+    background-color: #ff6666 !important;
+}
+
+.btn.max-width{
+   width: 100% !important;
+}
+
+.waves-effect .waves-ripple, .btn:hover {
+    /* The alpha value allows the text and background color
+    of the button to still show through. */
+    background-color: #f76576 !important;
+}
+
+#loading-container{
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 800px;
+    height: 300px;
+    text-align: center;
+}
+
+#chart-container{
+  margin-top: 20px;
+}
+
+.pane {
+	padding-top: 30px;
+	margin-top:20px;
+}
+
+.card-panel input{
+  margin-bottom: 0px;
+}
+
+#chart-container .input-field label {
+    color: #F43E54 !important;
+}
+/* label focus color */
+#chart-container .input-field input[type=text]:focus + label {
+    color: #F43E54  !important;
+}
+/* label underline focus color */
+#chart-container .input-field input[type=text]:focus {
+    border-bottom: 1px solid #F43E54 !important;
+    box-shadow: 0 1px 0 0 #F43E54 !important;
+}
+
+.info-collect .input-field label {
+    color: white !important;
+}
+/* label focus color */
+.info-collect .input-field input[type=text]:focus + label {
+    color: white  !important;
+}
+/* label underline focus color */
+.info-collect .input-field input[type=text]:focus {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important;
+}
+
+.info-collect .input-field input{
+  color: white;
+}
+
+
+@media screen and (max-width: 992px) {
+  .container p, .container a{
+    line-height: 30px !important;
+    font-size: 15px;
+  }
+
+  #intro, #loading-container{
+    margin-top: 50px;
+  }
+
+  .info-collect{
+    margin-top: 10px;
+  }
+
+  #logo2{
+    height: 65%;
+    width: 50%;
+    margin-top: 7px;
+    margin-left: 10px;
+  }
+
+  .contrib-panel{
+    padding-top: 5px;
+  }
+}
