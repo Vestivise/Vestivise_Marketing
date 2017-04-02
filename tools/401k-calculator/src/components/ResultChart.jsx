@@ -309,6 +309,52 @@ class ResultChart extends React.Component{
       ga('send', 'event', category, 'click', url);
     }
 
+    getItemLoses(){
+      var loss = this.state.endBalance-this.state.feeBalance;
+      const europeTrip = 5000;
+      const college = 200000;
+      const car = 350000;
+      const beachHome = 500000;
+      const penthouse = 1000000;
+      var map = {
+        "Trip To Europe" : 0,
+        "College Degrees" : 0,
+        "Ferrari Spider" : 0,
+        "Beach House" : 0,
+        "Pent House In Manhattan" : 0
+      };
+      if(loss/penthouse > 0){
+        map["Pent House In Manhattan"] = Math.floor(loss/penthouse);
+        loss -= Math.floor(loss/penthouse) * penthouse;
+      }
+      if(loss/beachHome > 0){
+        map["Beach House"] = Math.floor(loss/beachHome);
+        loss -= Math.floor(loss/beachHome) * beachHome;
+      }
+      if(loss/car > 0){
+        map["Ferrari Spider"] = Math.floor(loss/car);
+        loss -= Math.floor(loss/car) * car;
+      }
+      if(loss/college > 0){
+        map["College Degrees"] = Math.floor(loss/college);
+        loss -= Math.floor(loss/college) * college;
+      }
+      if(loss/europeTrip > 0){
+        map["Trip To Europe"] = Math.floor(loss/europeTrip);
+        loss -= Math.floor(loss/europeTrip) * europeTrip;
+      }
+      var result = "";
+      for(var item in map){
+        if(map[item] > 0){
+          if(result != ""){
+            result += " and ";
+          }
+          result += (map[item].toString() + " " + item + " ");
+        }
+      }
+      return result;
+    }
+
     getForm(isMobile){
       return(
         <form onSubmit={e => {
@@ -388,6 +434,7 @@ class ResultChart extends React.Component{
               <div className="row">
                 <div className="card-panel white z-depth-5 animated fadeInDown pane">
                   <h5>You've lost <b>{formatter.format(this.state.endBalance-this.state.feeBalance)}</b> in future savings due to fees.</h5>
+                  <h5>That's enough to buy <b>{this.getItemLoses()}</b></h5>
                   <h5>
                     <a onClick={this.trackGAOutBound("https://app.vestivise.com/register", 'new data')} className="underline" href="https://app.vestivise.com/register">
                       Sign Up Today

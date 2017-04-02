@@ -12,9 +12,9 @@ body {
 }
 
 #logo2{
-  height: 70%;
-  width: 20%;
-  margin-top: 7px;
+  height: 30px;
+  width: 150px;
+  margin-top: 15px;
   margin-left: 10px;
 }
 
@@ -215,12 +215,12 @@ input{
     margin-top: 10px;
   }
 
-  #logo2{
-    height: 65%;
-    width: 50%;
-    margin-top: 7px;
-    margin-left: 10px;
-  }
+  /*#logo2{*/
+    /*height: 65%;*/
+    /*width: 50%;*/
+    /*margin-top: 7px;*/
+    /*margin-left: 10px;*/
+  /*}*/
 
   .contrib-panel{
     padding-top: 5px;
