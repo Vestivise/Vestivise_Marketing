@@ -35,7 +35,7 @@ const collectionItems = [
     "state" : "current401k",
     "type" : InputTypes.dollars,
     "underline" : "The average 401k balance on Vestivise is $91,300.",
-    "link" : "https://www.vestivise.com/blog/holdingtype/"
+    "link" : ""
   },
   {
     "itemDescription" : "What are your returns?",
@@ -43,7 +43,7 @@ const collectionItems = [
     "state" : "rateOfReturn",
     "type" : InputTypes.percentage,
     "underline" : "According to Vestivise data, the average return for a 401k is 5% every year.",
-    "link" : "https://www.vestivise.com/blog/fees-bottom-line/"
+    "link" : ""
   },
   {
     "itemDescription" : "What are your fees?",
@@ -51,7 +51,7 @@ const collectionItems = [
     "state" : "fees",
     "type" : InputTypes.percentage,
     "underline" : "According to Vestivise data, the average fee for a 401k is 1% every year.",
-    "link" : "https://www.vestivise.com/blog/fees/"
+    "link" : ""
   },
   {
     "itemDescription" : "What’s your annual income?",
