@@ -317,7 +317,7 @@ class ResultChart extends React.Component{
       const beachHome = 500000;
       const penthouse = 1000000;
       var map = {
-        "Trip To Europe" : 0,
+        "Trips To Europe" : 0,
         "College Degrees" : 0,
         "Ferrari Spider" : 0,
         "Beach House" : 0,
@@ -404,7 +404,7 @@ class ResultChart extends React.Component{
               <ul className="side-nav" id="mobile">
                 <li><a onClick={this.trackGAOutBound("https://www.vestivise.com/blog", 'outbound')} href="https://www.vestivise.com/blog" className="waves-effect waves-light">Learn About Investing</a></li>
                 <li><a onClick={this.trackGAOutBound("https://app.vestivise.com/demo", 'outbound')} href="https://app.vestivise.com/demo" className="waves-effect waves-light">View the Demo</a></li>
-                <li><a onClick={this.trackGAOutBound("https://app.vestivise.com/register", 'outbound')} href="https://app.vestivise.com/register" className="waves-effect waves-light btn">Link Your 401k</a></li>
+                <li><a onClick={this.trackGAOutBound("https://app.vestivise.com/register", 'outbound')} href="https://app.vestivise.com/register" className="waves-effect waves-light btn">Link 401k</a></li>
               </ul>
             </div>
           </nav>
