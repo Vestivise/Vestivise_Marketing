@@ -29,10 +29,14 @@ class InputField extends React.Component{
     }
 
     getDisplayValue(value){
+
+
       var displayValue = value;
       var inputType = this.props.type;
       if(inputType == InputTypes.percentage){
-        displayValue = Math.round((displayValue * 100)).toString() + "%";
+        const tmp = value * 10000;
+        const result = Math.round(tmp)/100;
+        displayValue = result.toString() + "%";
       }
       else if(inputType == InputTypes.dollars){
         displayValue = formatter.format(value);
@@ -63,6 +67,7 @@ class InputField extends React.Component{
       if(isNaN(value)){
         return;
       }
+      console.log(value);
       this.setState({
         value : value,
         displayValue: this.getDisplayValue(value)
