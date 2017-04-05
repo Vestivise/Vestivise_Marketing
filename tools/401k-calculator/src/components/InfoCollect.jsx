@@ -21,7 +21,7 @@ class InfoCollect extends React.Component {
               <div className="col s12">
                 <h1>{this.props.itemDescription}</h1>
                 <p>{this.props.placeholder}</p>
-                <a target="_blank" href={this.props.link} className="underline">{this.props.underline}</a>
+                <p target="_blank" href={this.props.link} className="underline">{this.props.underline}</p>
               </div>
             </div>
             <div className="row">
