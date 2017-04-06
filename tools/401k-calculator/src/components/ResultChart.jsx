@@ -340,7 +340,7 @@ class ResultChart extends React.Component{
         loss -= Math.floor(loss/college) * college;
       }
       if(loss/europeTrip > 0){
-        map["Trip To Europe"] = Math.floor(loss/europeTrip);
+        map["Trips To Europe"] = Math.floor(loss/europeTrip);
         loss -= Math.floor(loss/europeTrip) * europeTrip;
       }
       var result = "";
