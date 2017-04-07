@@ -187,17 +187,23 @@ input{
     color: white !important;
 }
 /* label focus color */
-.info-collect .input-field input[type=text]:focus + label {
+.info-collect .input-field input:focus + label {
     color: white  !important;
 }
 /* label underline focus color */
-.info-collect .input-field input[type=text]:focus {
+.info-collect .input-field input:focus {
     border-bottom: 1px solid white !important;
     box-shadow: 0 1px 0 0 white !important;
 }
 
 .info-collect .input-field input{
   color: white;
+}
+
+span.dollarInput::before {
+    float: left;
+    content: "\00a3"; /* £ */
+    padding: 3px 4px 3px 3px;
 }
 
 input[type="number"]::-webkit-outer-spin-button,

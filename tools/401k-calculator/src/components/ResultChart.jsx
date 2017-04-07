@@ -241,18 +241,18 @@ class ResultChart extends React.Component{
     }
 
     prepChart(){
-      var rate = this.state.data.rateOfReturn;
+      var rate = this.state.data.rateOfReturn/100;
       var numOfCompoundings = 1;
       var principle = this.state.data.current401k;
       var numOfPeriods = this.state.data.retirementAge - this.state.data.age;
-      var yearlyContrib = this.state.data.income * this.state.data.monthlyContrib;
-      var employeerMatch = this.state.data.employeeMatch * yearlyContrib + yearlyContrib;
+      var yearlyContrib = this.state.data.income * this.state.data.monthlyContrib/100;
+      var employeerMatch = this.state.data.employeeMatch/100 * yearlyContrib + yearlyContrib;
 
 
       var data = this.compound(rate, numOfCompoundings, principle, numOfPeriods, employeerMatch);
       var employeeMatchData = this.contributionTimeSeries(principle, employeerMatch, numOfPeriods);
       var principleGrowthData = this.contributionTimeSeries(principle, yearlyContrib, numOfPeriods);
-      var feeData = this.calculateFees(rate, numOfCompoundings, principle, numOfPeriods, employeerMatch, this.state.data.fees);
+      var feeData = this.calculateFees(rate, numOfCompoundings, principle, numOfPeriods, employeerMatch, this.state.data.fees/100);
       this.setState({
         endBalance: data[data.length - 1],
         feeBalance : feeData[feeData.length - 1]
@@ -317,30 +317,30 @@ class ResultChart extends React.Component{
       const beachHome = 500000;
       const penthouse = 1000000;
       var map = {
-        "Trips To Europe" : 0,
-        "College Degrees" : 0,
-        "Ferrari Spider" : 0,
-        "Beach House" : 0,
-        "Pent House In Manhattan" : 0
+        "Trip(s) To Europe" : 0,
+        "College Degree(s)" : 0,
+        "Ferrari Spider(s)" : 0,
+        "Beach House(s)" : 0,
+        "Pent House(s) In Manhattan" : 0
       };
       if(loss/penthouse > 0){
-        map["Pent House In Manhattan"] = Math.floor(loss/penthouse);
+        map["Pent House(s) In Manhattan"] = Math.floor(loss/penthouse);
         loss -= Math.floor(loss/penthouse) * penthouse;
       }
       if(loss/beachHome > 0){
-        map["Beach House"] = Math.floor(loss/beachHome);
+        map["Beach House(s)"] = Math.floor(loss/beachHome);
         loss -= Math.floor(loss/beachHome) * beachHome;
       }
       if(loss/car > 0){
-        map["Ferrari Spider"] = Math.floor(loss/car);
+        map["Ferrari Spider(s)"] = Math.floor(loss/car);
         loss -= Math.floor(loss/car) * car;
       }
       if(loss/college > 0){
-        map["College Degrees"] = Math.floor(loss/college);
+        map["College Degree(s)"] = Math.floor(loss/college);
         loss -= Math.floor(loss/college) * college;
       }
       if(loss/europeTrip > 0){
-        map["Trips To Europe"] = Math.floor(loss/europeTrip);
+        map["Trip(s) To Europe"] = Math.floor(loss/europeTrip);
         loss -= Math.floor(loss/europeTrip) * europeTrip;
       }
       var result = "";
@@ -387,8 +387,8 @@ class ResultChart extends React.Component{
           </div>
         );
       }
-      var yearlyContrib = this.state.data.income * this.state.data.monthlyContrib;
-      var employeerMatch = this.state.data.employeeMatch * yearlyContrib;
+      var yearlyContrib = this.state.data.income * this.state.data.monthlyContrib/100;
+      var employeerMatch = this.state.data.employeeMatch/100 * yearlyContrib;
       var getForm = this.getForm.bind(this);
       return(
         <div id="app-container">
