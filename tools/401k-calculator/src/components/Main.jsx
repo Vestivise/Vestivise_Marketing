@@ -91,7 +91,6 @@ class AppContainer extends React.Component {
     const currentSlide = this.state.currentSlide + 1;
     if(currentSlide != collectionItems.length){
       const itemDescription = collectionItems[currentSlide];
-      console.log(itemDescription);
       ga('send', 'event', 'input-transition', 'next', itemDescription['itemDescription']);
       $('#slick-container').slick('slickNext');
     }
