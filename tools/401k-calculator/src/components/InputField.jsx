@@ -27,7 +27,7 @@ class InputField extends React.Component{
     onChange(e){
       var value = e.target.value;
       this.setState({
-        value : parseFloat(value.replace(",").replace("%")),
+        value : parseFloat(value.replace(",", "").replace("%", "")),
       });
     }
 

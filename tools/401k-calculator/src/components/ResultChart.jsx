@@ -158,6 +158,7 @@ class ResultChart extends React.Component{
 
     constructor(props){
         super(props);
+        console.log(props.data);
         this.state = {
           data : props.data,
           isLoading : true,
